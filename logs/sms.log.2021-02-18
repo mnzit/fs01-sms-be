@@ -1,0 +1,1635 @@
+2021-02-18 08:06:10 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:06:10 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:06:10 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:06:10 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:06:10 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:06:12 [restartedMain] INFO  RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-18 08:06:12 [restartedMain] INFO  RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 125 ms. Found 1 JPA repository interfaces.
+2021-02-18 08:06:14 [restartedMain] INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-18 08:06:15 [restartedMain] INFO  ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 4511 ms
+2021-02-18 08:06:15 [restartedMain] DEBUG HikariConfig:946 - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24491bdb
+2021-02-18 08:06:15 [restartedMain] DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-02-18 08:06:15 [restartedMain] INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-18 08:06:15 [restartedMain] INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-18 08:06:16 [restartedMain] INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1066 - HikariPool-1 - configuration:
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - allowPoolSuspension.............false
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - autoCommit......................true
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - catalog.........................none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - connectionInitSql...............none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - connectionTestQuery.............none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - connectionTimeout...............30000
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - dataSource......................none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - dataSourceClassName.............none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - dataSourceJNDI..................none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - dataSourceProperties............{password=<masked>}
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - driverClassName................."com.mysql.cj.jdbc.Driver"
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - exceptionOverrideClassName......none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - healthCheckProperties...........{}
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - healthCheckRegistry.............none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - idleTimeout.....................600000
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - initializationFailTimeout.......1
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - isolateInternalQueries..........false
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - jdbcUrl.........................jdbc:mysql://localhost:3306/SMS
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - leakDetectionThreshold..........0
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - maxLifetime.....................1800000
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - maximumPoolSize.................100
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - metricRegistry..................none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - metricsTrackerFactory...........none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - minimumIdle.....................50
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - password........................<masked>
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - poolName........................"HikariPool-1"
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - readOnly........................false
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - registerMbeans..................false
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - scheduledExecutor...............none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - schema..........................none
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - threadFactory...................internal
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - transactionIsolation............default
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - username........................"root"
+2021-02-18 08:06:16 [restartedMain] DEBUG HikariConfig:1098 - validationTimeout...............5000
+2021-02-18 08:06:16 [restartedMain] INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2021-02-18 08:06:17 [restartedMain] DEBUG HikariPool:564 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12d2c613
+2021-02-18 08:06:17 [restartedMain] INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2021-02-18 08:06:17 [restartedMain] INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-18 08:06:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2021-02-18 08:06:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66e492c7
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@120f228c
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43c9ff30
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@64ee08ad
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4787c050
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e5f5e71
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17d88740
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@628be034
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d805dac
+2021-02-18 08:06:17 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@786ca077
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67009819
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8fa8941
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73cb77c5
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@324ebf35
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9a93844
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bf7ba60
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@413b7836
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ec41fdc
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@256f3c18
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47611802
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c321530
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@645ed9dd
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2355a77d
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19e273db
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ddb1afe
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a5a3d60
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@655f2577
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@594efb92
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@236d02ff
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c8828f9
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17cb8cc3
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e930862
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19392faa
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54ce028
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f48d8a5
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fae1435
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7eba26d1
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63892401
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@790aeed4
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3000453
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35501901
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3657456
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c87c914
+2021-02-18 08:06:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@325e9c93
+2021-02-18 08:06:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b6bdbf9
+2021-02-18 08:06:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b5280d5
+2021-02-18 08:06:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54aaffb0
+2021-02-18 08:06:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77fcaaa6
+2021-02-18 08:06:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f9b215c
+2021-02-18 08:06:19 [restartedMain] INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-18 08:06:19 [restartedMain] INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-18 08:06:19 [restartedMain] INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2021-02-18 08:06:20 [restartedMain] WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 08:06:20 [restartedMain] INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-18 08:06:20 [restartedMain] INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/sms'
+2021-02-18 08:06:20 [restartedMain] INFO  SmsApplication:61 - Started SmsApplication in 11.583 seconds (JVM running for 14.765)
+2021-02-18 08:06:20 [restartedMain] INFO  SmsApplication:17 - 
+  #####  #     #  #####  
+ #     # ##   ## #     # 
+ #       # # # # #       
+  #####  #  #  #  #####  
+       # #     #       # 
+ #     # #     # #     # 
+  #####  #     #  #####  
+2021-02-18 08:06:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:06:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:06:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:07:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:07:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:07:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:07:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:07:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:07:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:08:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:08:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:08:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:08:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:08:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:08:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:09:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:09:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:09:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:09:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:09:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:09:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:10:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:10:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:10:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:10:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:10:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:10:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:11:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:11:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:11:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:11:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:11:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:11:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:12:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:12:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:12:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:12:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:12:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:12:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:13:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:13:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:13:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:13:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:13:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:13:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:14:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:14:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:14:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:14:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:14:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:14:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:15:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:15:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:15:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:15:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:15:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:15:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:16:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:16:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:16:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:16:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:16:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:16:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:17:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:17:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:17:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:17:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:17:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:17:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:18:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:18:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:18:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:18:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:18:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:18:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:19:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:19:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:19:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:19:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:19:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:19:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:20:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:20:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:20:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:20:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:20:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:20:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:21:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:21:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:21:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:21:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:21:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:21:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:22:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:22:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:22:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:22:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:22:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:22:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:23:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:23:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:23:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:23:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:23:47 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:23:47 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:24:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:24:17 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:24:17 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:24:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:24:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:24:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:25:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:25:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:25:18 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:25:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:25:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:25:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:26:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:26:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:26:18 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:26:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:26:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:26:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:27:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:27:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:27:18 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:27:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:27:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:27:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:28:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:28:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:28:18 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:28:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:28:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:28:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:29:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:29:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:29:18 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:29:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:29:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:29:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:30:02 [Thread-20] INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-18 08:30:02 [Thread-20] INFO  LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-18 08:30:02 [Thread-20] INFO  HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+2021-02-18 08:30:02 [Thread-20] DEBUG HikariPool:421 - HikariPool-1 - Before shutdown stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@12d2c613: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@66e492c7: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@120f228c: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@43c9ff30: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@64ee08ad: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4787c050: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2e5f5e71: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@17d88740: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@628be034: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3d805dac: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@786ca077: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@67009819: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@8fa8941: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@73cb77c5: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@324ebf35: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@9a93844: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4bf7ba60: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@413b7836: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3ec41fdc: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@256f3c18: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@47611802: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5c321530: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@645ed9dd: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2355a77d: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19e273db: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6ddb1afe: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6a5a3d60: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@655f2577: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@594efb92: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@236d02ff: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4c8828f9: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@17cb8cc3: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5e930862: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@19392faa: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@54ce028: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7f48d8a5: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@fae1435: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7eba26d1: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@63892401: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@790aeed4: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3000453: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@35501901: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3657456: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3c87c914: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@325e9c93: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6b6bdbf9: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3b5280d5: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@54aaffb0: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@77fcaaa6: (connection evicted)
+2021-02-18 08:30:02 [HikariPool-1 connection closer] DEBUG PoolBase:134 - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4f9b215c: (connection evicted)
+2021-02-18 08:30:02 [Thread-20] DEBUG HikariPool:421 - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-02-18 08:30:02 [Thread-20] INFO  HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+2021-02-18 08:30:03 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:30:03 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:30:03 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:30:03 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:30:03 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:30:03 [restartedMain] INFO  RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-18 08:30:03 [restartedMain] INFO  RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2021-02-18 08:30:03 [restartedMain] INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-18 08:30:03 [restartedMain] INFO  ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 959 ms
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:946 - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@8c2d5de
+2021-02-18 08:30:04 [restartedMain] INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1066 - HikariPool-2 - configuration:
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - allowPoolSuspension.............false
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - autoCommit......................true
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - catalog.........................none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - connectionInitSql...............none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - connectionTestQuery.............none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - connectionTimeout...............30000
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - dataSource......................none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - dataSourceClassName.............none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - dataSourceJNDI..................none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - dataSourceProperties............{password=<masked>}
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - driverClassName................."com.mysql.cj.jdbc.Driver"
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - exceptionOverrideClassName......none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - healthCheckProperties...........{}
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - healthCheckRegistry.............none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - idleTimeout.....................600000
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - initializationFailTimeout.......1
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - isolateInternalQueries..........false
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - jdbcUrl.........................jdbc:mysql://localhost:3306/SMS
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - leakDetectionThreshold..........0
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - maxLifetime.....................1800000
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - maximumPoolSize.................100
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - metricRegistry..................none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - metricsTrackerFactory...........none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - minimumIdle.....................50
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - password........................<masked>
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - poolName........................"HikariPool-2"
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - readOnly........................false
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - registerMbeans..................false
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - scheduledExecutor...............none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - schema..........................none
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - threadFactory...................internal
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - transactionIsolation............default
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - username........................"root"
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariConfig:1098 - validationTimeout...............5000
+2021-02-18 08:30:04 [restartedMain] INFO  HikariDataSource:110 - HikariPool-2 - Starting...
+2021-02-18 08:30:04 [restartedMain] DEBUG HikariPool:564 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fe85700
+2021-02-18 08:30:04 [restartedMain] INFO  HikariDataSource:123 - HikariPool-2 - Start completed.
+2021-02-18 08:30:04 [restartedMain] INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-18 08:30:04 [restartedMain] INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-18 08:30:04 [restartedMain] INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-18 08:30:04 [restartedMain] INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2021-02-18 08:30:04 [restartedMain] WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 08:30:04 [HikariPool-2 housekeeper] DEBUG HikariPool:421 - HikariPool-2 - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2021-02-18 08:30:04 [HikariPool-2 housekeeper] DEBUG HikariPool:421 - HikariPool-2 - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34e6ee0d
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75dbe436
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4464b50e
+2021-02-18 08:30:04 [restartedMain] INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15f41b79
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e896466
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11ba622c
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@180fabf4
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a367c48
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@707f119c
+2021-02-18 08:30:04 [restartedMain] INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/sms'
+2021-02-18 08:30:04 [restartedMain] INFO  SmsApplication:61 - Started SmsApplication in 1.513 seconds (JVM running for 1438.524)
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f68176e
+2021-02-18 08:30:04 [restartedMain] INFO  ConditionEvaluationDeltaLoggingListener:63 - Condition evaluation unchanged
+2021-02-18 08:30:04 [restartedMain] INFO  SmsApplication:17 - 
+  #####  #     #  #####  
+ #     # ##   ## #     # 
+ #       # # # # #       
+  #####  #  #  #  #####  
+       # #     #       # 
+ #     # #     # #     # 
+  #####  #     #  #####  
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30d889a8
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1696cc88
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4616d5b0
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ca9ae4a
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62e72d97
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51ca8e69
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e4bc2af
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7eeca0f5
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25b2a8b2
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43ee551a
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1462864b
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8c9bc16
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d899fb
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@985d611
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@da3d2a5
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@298fce51
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41488196
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75ba51eb
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@489215a2
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a40c648
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@446f6918
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c11f73
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@138e3396
+2021-02-18 08:30:04 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28137647
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5329375e
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cab9435
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a8425f8
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e55d69f
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ef8b2f4
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f0dbf57
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7681dcba
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@384cbc93
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60e2020d
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d727eb9
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@262881c8
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57a942a2
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33da57d4
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5465c67e
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:728 - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@110dc2e4
+2021-02-18 08:30:05 [HikariPool-2 connection adder] DEBUG HikariPool:421 - HikariPool-2 - After adding stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:30:09 [Thread-30] INFO  ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-18 08:30:09 [Thread-30] INFO  LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-18 08:30:09 [Thread-30] INFO  HikariDataSource:350 - HikariPool-2 - Shutdown initiated...
+2021-02-18 08:30:09 [Thread-30] DEBUG HikariPool:421 - HikariPool-2 - Before shutdown stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4fe85700: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@34e6ee0d: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@75dbe436: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4464b50e: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@15f41b79: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3e896466: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@11ba622c: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@180fabf4: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7a367c48: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@707f119c: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7f68176e: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@30d889a8: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1696cc88: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4616d5b0: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1ca9ae4a: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@62e72d97: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@51ca8e69: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7e4bc2af: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7eeca0f5: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@25b2a8b2: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@43ee551a: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1462864b: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@8c9bc16: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6d899fb: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@985d611: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@da3d2a5: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@298fce51: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@41488196: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@75ba51eb: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@489215a2: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4a40c648: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@446f6918: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72c11f73: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@138e3396: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@28137647: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5329375e: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2cab9435: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4a8425f8: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@6e55d69f: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3ef8b2f4: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1f0dbf57: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7681dcba: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@384cbc93: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@60e2020d: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3d727eb9: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@262881c8: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@57a942a2: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@33da57d4: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5465c67e: (connection evicted)
+2021-02-18 08:30:09 [HikariPool-2 connection closer] DEBUG PoolBase:134 - HikariPool-2 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@110dc2e4: (connection evicted)
+2021-02-18 08:30:09 [Thread-30] DEBUG HikariPool:421 - HikariPool-2 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-02-18 08:30:09 [Thread-30] INFO  HikariDataSource:352 - HikariPool-2 - Shutdown completed.
+2021-02-18 08:30:09 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:30:09 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:30:09 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:30:09 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:30:09 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:30:10 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2596e36d]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:30:10 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2596e36d]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:32:23 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:32:23 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:32:23 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:32:23 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:32:23 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:32:23 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@75929087]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:32:23 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@75929087]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:32:26 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:32:26 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:32:26 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:32:26 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:32:26 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:32:27 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1908e331]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:32:27 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1908e331]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:34:10 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:34:10 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:34:10 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:34:10 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:34:10 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:34:10 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@21aed807]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:34:10 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@21aed807]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:34:14 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:34:14 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:34:14 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:34:14 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:34:14 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:34:14 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@bb74a26]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:34:14 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@bb74a26]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:35:58 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:35:58 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:35:58 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:35:58 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:35:58 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:35:59 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@59b7b6fd]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:35:59 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@59b7b6fd]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:36:02 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:36:02 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:36:03 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:36:03 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:36:03 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:36:03 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cab4d6b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:36:03 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cab4d6b]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:38:52 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:38:52 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:38:52 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 23492 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:38:52 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:38:52 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:38:52 [restartedMain] ERROR SpringApplication:856 - Application run failed
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:348)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4c4fe1c0]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:238)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:231)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:221)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:169)
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:144)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 23 more
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 39 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 43 more
+2021-02-18 08:38:52 [restartedMain] WARN  SpringApplication:828 - Unable to close ApplicationContext
+java.lang.IllegalStateException: Failed to introspect Class [com.sudreeshya.sms.config.AppConfig] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4c4fe1c0]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:358)
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:754)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:692)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:663)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1670)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:667)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:659)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1305)
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:899)
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:887)
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:874)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:336)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at com.sudreeshya.sms.SmsApplication.main(SmsApplication.java:12)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: org/modelmapper/ModelMapper
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.modelmapper.ModelMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 30 more
+2021-02-18 08:39:13 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 22860 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:39:13 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:39:13 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:39:13 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:39:13 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:39:15 [restartedMain] INFO  RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-18 08:39:15 [restartedMain] INFO  RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 148 ms. Found 1 JPA repository interfaces.
+2021-02-18 08:39:16 [restartedMain] INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-18 08:39:16 [restartedMain] INFO  ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 3144 ms
+2021-02-18 08:39:16 [restartedMain] DEBUG HikariConfig:946 - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cd030c1
+2021-02-18 08:39:16 [restartedMain] DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-02-18 08:39:16 [restartedMain] INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-18 08:39:16 [restartedMain] INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-18 08:39:17 [restartedMain] INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1066 - HikariPool-1 - configuration:
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - allowPoolSuspension.............false
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - autoCommit......................true
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - catalog.........................none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - connectionInitSql...............none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - connectionTestQuery.............none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - connectionTimeout...............30000
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - dataSource......................none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - dataSourceClassName.............none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - dataSourceJNDI..................none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - dataSourceProperties............{password=<masked>}
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - driverClassName................."com.mysql.cj.jdbc.Driver"
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - exceptionOverrideClassName......none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - healthCheckProperties...........{}
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - healthCheckRegistry.............none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - idleTimeout.....................600000
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - initializationFailTimeout.......1
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - isolateInternalQueries..........false
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - jdbcUrl.........................jdbc:mysql://localhost:3306/SMS
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - leakDetectionThreshold..........0
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - maxLifetime.....................1800000
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - maximumPoolSize.................100
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - metricRegistry..................none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - metricsTrackerFactory...........none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - minimumIdle.....................50
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - password........................<masked>
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - poolName........................"HikariPool-1"
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - readOnly........................false
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - registerMbeans..................false
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - scheduledExecutor...............none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - schema..........................none
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - threadFactory...................internal
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - transactionIsolation............default
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - username........................"root"
+2021-02-18 08:39:17 [restartedMain] DEBUG HikariConfig:1098 - validationTimeout...............5000
+2021-02-18 08:39:17 [restartedMain] INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2021-02-18 08:39:18 [restartedMain] DEBUG HikariPool:564 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13746981
+2021-02-18 08:39:18 [restartedMain] INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2021-02-18 08:39:18 [restartedMain] INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-18 08:39:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2021-02-18 08:39:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c20ba4
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c96154
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23ef7a57
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dba8182
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27a1a511
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e020579
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1875ba4b
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4986102c
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c9ec59c
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50417be2
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@289f62f1
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ee218f8
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3feac974
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2869a3b4
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a26d09c
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a00f02f
+2021-02-18 08:39:18 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@773edd70
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@727661c5
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a5ed3c9
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77ddeb4
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22d6b233
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2aad54cd
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@249bc556
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4269b3c4
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56f6de15
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f99356d
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b7b0a28
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@272d2d9b
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74102efe
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51592cf6
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29fc00a3
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a7c31d4
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a1be999
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57016e50
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19c1fa6f
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@294e8ee9
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f83e0df
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f94db60
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dacae13
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77a9b6e3
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b63d482
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76d3622d
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@394a31a5
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26bfe40c
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@730ef384
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@603826e6
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@766ff8eb
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f256664
+2021-02-18 08:39:19 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29fd108c
+2021-02-18 08:39:20 [restartedMain] INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-18 08:39:20 [restartedMain] INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-18 08:39:20 [restartedMain] INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2021-02-18 08:39:20 [restartedMain] WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 08:39:20 [restartedMain] INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-18 08:39:21 [restartedMain] INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/sms'
+2021-02-18 08:39:21 [restartedMain] INFO  SmsApplication:61 - Started SmsApplication in 8.955 seconds (JVM running for 11.171)
+2021-02-18 08:39:21 [restartedMain] INFO  SmsApplication:17 - 
+  #####  #     #  #####  
+ #     # ##   ## #     # 
+ #       # # # # #       
+  #####  #  #  #  #####  
+       # #     #       # 
+ #     # #     # #     # 
+  #####  #     #  #####  
+2021-02-18 08:39:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:39:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:39:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:39:54 [http-nio-8080-exec-1] INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-02-18 08:39:54 [http-nio-8080-exec-1] INFO  DispatcherServlet:547 - Completed initialization in 4 ms
+2021-02-18 08:40:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:40:18 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:40:18 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:40:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:40:48 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:40:48 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:41:04 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 2552 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-18 08:41:04 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-18 08:41:04 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-18 08:41:04 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-18 08:41:04 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-18 08:41:06 [restartedMain] INFO  RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-18 08:41:06 [restartedMain] INFO  RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interfaces.
+2021-02-18 08:41:07 [restartedMain] INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-18 08:41:07 [restartedMain] INFO  ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2685 ms
+2021-02-18 08:41:07 [restartedMain] DEBUG HikariConfig:946 - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1873f71
+2021-02-18 08:41:07 [restartedMain] DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-02-18 08:41:07 [restartedMain] INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-18 08:41:07 [restartedMain] INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-18 08:41:07 [restartedMain] INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1066 - HikariPool-1 - configuration:
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - allowPoolSuspension.............false
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - autoCommit......................true
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - catalog.........................none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - connectionInitSql...............none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - connectionTestQuery.............none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - connectionTimeout...............30000
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - dataSource......................none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - dataSourceClassName.............none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - dataSourceJNDI..................none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - dataSourceProperties............{password=<masked>}
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - driverClassName................."com.mysql.cj.jdbc.Driver"
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - exceptionOverrideClassName......none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - healthCheckProperties...........{}
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - healthCheckRegistry.............none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - idleTimeout.....................600000
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - initializationFailTimeout.......1
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - isolateInternalQueries..........false
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - jdbcUrl.........................jdbc:mysql://localhost:3306/SMS
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - leakDetectionThreshold..........0
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - maxLifetime.....................1800000
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - maximumPoolSize.................100
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - metricRegistry..................none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - metricsTrackerFactory...........none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - minimumIdle.....................50
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - password........................<masked>
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - poolName........................"HikariPool-1"
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - readOnly........................false
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - registerMbeans..................false
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - scheduledExecutor...............none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - schema..........................none
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - threadFactory...................internal
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - transactionIsolation............default
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - username........................"root"
+2021-02-18 08:41:08 [restartedMain] DEBUG HikariConfig:1098 - validationTimeout...............5000
+2021-02-18 08:41:08 [restartedMain] INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2021-02-18 08:41:09 [restartedMain] DEBUG HikariPool:564 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c849135
+2021-02-18 08:41:09 [restartedMain] INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2021-02-18 08:41:09 [restartedMain] INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-18 08:41:09 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2021-02-18 08:41:09 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@96fee67
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7debbf22
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c428e61
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1055ab43
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@280cd68a
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d578aa5
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76fed716
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b7ca992
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c83db54
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24155775
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41e97c22
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c3d460
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d799d74
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c94aa71
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@117a871b
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19eaabea
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70a6d04a
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fe96f5e
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24c2b4d
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@470573d
+2021-02-18 08:41:09 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57a305b2
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b5e376d
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@127e3d56
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f25fc79
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28a7bd67
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f2bae43
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24825d34
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53de491d
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8a2f4e7
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@752a6358
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f258fcd
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37e383fd
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e495620
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cc3e0f7
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a4149c5
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d7ac61f
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c0a7c86
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23d941db
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@78943c0f
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@183c688e
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a0e5f65
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31a8be43
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14429a2
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61691710
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@553980c1
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56e6cfde
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f57ff13
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@540f34ea
+2021-02-18 08:41:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@789910f1
+2021-02-18 08:41:11 [restartedMain] INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-18 08:41:11 [restartedMain] INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-18 08:41:11 [restartedMain] INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2021-02-18 08:41:11 [restartedMain] WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-18 08:41:11 [restartedMain] INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-18 08:41:12 [restartedMain] INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/sms'
+2021-02-18 08:41:12 [restartedMain] INFO  SmsApplication:61 - Started SmsApplication in 8.492 seconds (JVM running for 10.888)
+2021-02-18 08:41:12 [restartedMain] INFO  SmsApplication:17 - 
+  #####  #     #  #####  
+ #     # ##   ## #     # 
+ #       # # # # #       
+  #####  #  #  #  #####  
+       # #     #       # 
+ #     # #     # #     # 
+  #####  #     #  #####  
+2021-02-18 08:41:18 [http-nio-8080-exec-2] INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-02-18 08:41:18 [http-nio-8080-exec-2] INFO  DispatcherServlet:547 - Completed initialization in 6 ms
+2021-02-18 08:41:39 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:41:39 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:41:39 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-18 08:42:09 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:42:09 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-18 08:42:09 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
