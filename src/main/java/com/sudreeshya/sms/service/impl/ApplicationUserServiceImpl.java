@@ -14,6 +14,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -112,5 +113,40 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
             log.info("After saving to repository: {}", applicationUserRepository);
             return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_WAS_DETETED);
         }
+    }
+
+    @Override
+    public GenericResponse findDeletedUsers() {
+        final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
+        if(applicationUsers.isEmpty()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USERS_FOUND_FAILURE);
+        }
+        ApplicationUser applicationUser = new ApplicationUser();
+
+        List<UserDTO> userDTOList = new ArrayList<>();
+
+        userDTOList = applicationUsers
+                .stream()
+                .map(appUsers -> modelMapper.map(appUsers, UserDTO.class))
+                .collect(Collectors.toList());
+
+        log.info("userDTOList: {}", userDTOList);
+
+        List<UserDTO> usersTrash = new ArrayList<>();
+
+        for (UserDTO userDTO: userDTOList) {
+            if(userDTO.getIsActive() == 'N'){
+                usersTrash.add(userDTO);
+            }
+        }
+        log.info("Trash: {}", usersTrash);
+
+        if(usersTrash.isEmpty()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.NO_TRASH);
+        }
+        else{
+            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USERS_FOUND_SUCCESS, usersTrash);
+        }
+
     }
 }

@@ -19,4 +19,6 @@ public interface ApplicationUserService {
     GenericResponse updateApplicationUser(Long id, UpdateUserRequest request);
 
     GenericResponse deleteApplicationUser(Long id);
+
+    GenericResponse findDeletedUsers();
 }

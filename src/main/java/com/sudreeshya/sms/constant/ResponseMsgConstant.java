@@ -9,4 +9,5 @@ public interface ResponseMsgConstant {
     String USERS_FOUND_SUCCESS = "Users fetched Successfully";
     String USER_WAS_DETETED = "The User you were looking for was deleted!";
     String USERS_FOUND_FAILURE = "User was not found";
+    String NO_TRASH = "There are no deleted users in Trash!";
 }
