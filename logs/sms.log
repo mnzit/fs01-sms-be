@@ -3428,3 +3428,18 @@
 2021-02-23 22:04:36 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
 2021-02-23 22:04:36 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
 2021-02-23 22:04:36 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-23 22:05:06 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:05:06 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:05:06 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-23 22:05:36 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:05:36 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:05:36 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-23 22:06:06 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:06:06 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:06:06 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-23 22:06:36 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:06:36 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:06:36 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-23 22:07:06 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:07:06 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-23 22:07:06 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
