@@ -7,6 +7,7 @@ package com.sudreeshya.sms.constant;
 public interface ApiPathConstants {
 
     String USERS = "users";
+    String LOGIN = "login";
 
     interface PathVariable {
 
