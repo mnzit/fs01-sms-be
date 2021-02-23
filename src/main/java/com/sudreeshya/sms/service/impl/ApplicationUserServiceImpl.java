@@ -59,8 +59,10 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         if (!applicationUser.isPresent()) {
             return ResponseBuilder.buildFailure("User not found");
         }
-
-        UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
+       UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
+        if(response.getIsActive() == 'N'){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DETETED);
+        }
         return ResponseBuilder.buildSuccess("User fetched Successfully", response);
     }
 
@@ -91,5 +93,24 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         applicationUserRepository.save(applicationUser);
 
         return ResponseBuilder.buildSuccess("User Updated Successfully");
+    }
+
+    @Override
+    public GenericResponse deleteApplicationUser(Long id) {
+        Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
+        log.info("Optional: {}", applicationUserOptional);
+        if(!applicationUserOptional.isPresent()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USERS_FOUND_FAILURE);
+        }
+
+        else{
+            ApplicationUser applicationUser = new ApplicationUser();
+            applicationUser = modelMapper.map(applicationUserOptional.get(), ApplicationUser.class);
+            log.info("After mapping to ApplicationUSer: {}", applicationUser);
+            applicationUser.setIsActive('N');
+            applicationUserRepository.save(applicationUser);
+            log.info("After saving to repository: {}", applicationUserRepository);
+            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_WAS_DETETED);
+        }
     }
 }

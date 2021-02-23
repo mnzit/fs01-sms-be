@@ -20,5 +20,6 @@ public interface ApiPathConstants {
     interface SharedOperations{
         String SAVE = "save";
         String UPDATE = "update";
+        String DELETE = "delete";
     }
 }

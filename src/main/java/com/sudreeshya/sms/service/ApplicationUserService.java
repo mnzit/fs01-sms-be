@@ -17,4 +17,6 @@ public interface ApplicationUserService {
     GenericResponse saveApplicationUser(SaveUserRequest request);
 
     GenericResponse updateApplicationUser(Long id, UpdateUserRequest request);
+
+    GenericResponse deleteApplicationUser(Long id);
 }
