@@ -7,14 +7,18 @@ package com.sudreeshya.sms.constant;
 public interface ApiPathConstants {
 
     String USERS = "users";
+    String COURSES = "courses";
+    String SUBJECTS = "subjects";
 
     interface PathVariable {
 
         String USERID = "userId";
         String COURSEID = "courseId";
+        String SUBJECTID = "subjectId";
 
         String USERID_WRAPPER = "{" + PathVariable.USERID + "}";
         String COURSEID_WRAPPER = "{" + PathVariable.COURSEID + "}";
+        String SUBJECTID_WRAPPER = "{"+PathVariable.SUBJECTID+"}";
     }
 
     interface SharedOperations{

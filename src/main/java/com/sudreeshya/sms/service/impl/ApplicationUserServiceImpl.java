@@ -60,7 +60,7 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         if (!applicationUser.isPresent()) {
             return ResponseBuilder.buildFailure("User not found");
         }
-       UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
+        UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
         if(response.getIsActive() == 'N'){
             return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DETETED);
         }
