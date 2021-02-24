@@ -10,6 +10,7 @@ public interface ApiPathConstants {
     String COURSES = "courses";
     String SUBJECTS = "subjects";
 
+
     interface PathVariable {
 
         String USERID = "userId";
@@ -25,5 +26,6 @@ public interface ApiPathConstants {
         String SAVE = "save";
         String UPDATE = "update";
         String DELETE = "delete";
+        String TRASH = "trash";
     }
 }
