@@ -135,3 +135,179 @@
 2021-02-24 08:35:34 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
 2021-02-24 08:35:34 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
 2021-02-24 08:35:34 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:36:04 [restartedMain] INFO  SmsApplication:55 - Starting SmsApplication using Java 1.8.0_261 on mnzit with PID 19992 (D:\Videos Full Stack\Files\SMS\target\classes started by Manjit in D:\Videos Full Stack\Files\SMS)
+2021-02-24 08:36:04 [restartedMain] DEBUG SmsApplication:56 - Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-02-24 08:36:04 [restartedMain] INFO  SmsApplication:660 - No active profile set, falling back to default profiles: default
+2021-02-24 08:36:05 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-24 08:36:05 [restartedMain] INFO  DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-24 08:36:07 [restartedMain] INFO  RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-24 08:36:07 [restartedMain] INFO  RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 159 ms. Found 1 JPA repository interfaces.
+2021-02-24 08:36:08 [restartedMain] INFO  TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+2021-02-24 08:36:08 [restartedMain] INFO  ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 3581 ms
+2021-02-24 08:36:08 [restartedMain] DEBUG HikariConfig:946 - Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@cd030c1
+2021-02-24 08:36:08 [restartedMain] DEBUG logging:38 - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2021-02-24 08:36:08 [restartedMain] INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-24 08:36:09 [restartedMain] INFO  Version:44 - HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-24 08:36:09 [restartedMain] INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1066 - HikariPool-1 - configuration:
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - allowPoolSuspension.............false
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - autoCommit......................true
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - catalog.........................none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - connectionInitSql...............none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - connectionTestQuery.............none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - connectionTimeout...............30000
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - dataSource......................none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - dataSourceClassName.............none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - dataSourceJNDI..................none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - dataSourceProperties............{password=<masked>}
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - driverClassName................."com.mysql.cj.jdbc.Driver"
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - exceptionOverrideClassName......none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - healthCheckProperties...........{}
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - healthCheckRegistry.............none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - idleTimeout.....................600000
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - initializationFailTimeout.......1
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - isolateInternalQueries..........false
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - jdbcUrl.........................jdbc:mysql://localhost:3306/SMS
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - leakDetectionThreshold..........0
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - maxLifetime.....................1800000
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - maximumPoolSize.................100
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - metricRegistry..................none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - metricsTrackerFactory...........none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - minimumIdle.....................50
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - password........................<masked>
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - poolName........................"HikariPool-1"
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - readOnly........................false
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - registerMbeans..................false
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - scheduledExecutor...............none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - schema..........................none
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - threadFactory...................internal
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - transactionIsolation............default
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - username........................"root"
+2021-02-24 08:36:09 [restartedMain] DEBUG HikariConfig:1098 - validationTimeout...............5000
+2021-02-24 08:36:09 [restartedMain] INFO  HikariDataSource:110 - HikariPool-1 - Starting...
+2021-02-24 08:36:10 [restartedMain] DEBUG HikariPool:564 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50836b37
+2021-02-24 08:36:10 [restartedMain] INFO  HikariDataSource:123 - HikariPool-1 - Start completed.
+2021-02-24 08:36:10 [restartedMain] INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2021-02-24 08:36:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=1, active=0, idle=1, waiting=0)
+2021-02-24 08:36:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=1, active=0, idle=1, waiting=0)
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@179d2803
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@638716bc
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32b05bdb
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c01eb26
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36fe85ca
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2347ddc7
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ea10ea9
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@23bb1a43
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@212a066d
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@609ba14d
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19e1798f
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d911acc
+2021-02-24 08:36:10 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e3b936d
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2906e28e
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58689003
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e29ba29
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16f217c
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@395a6f2e
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60839dc
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d949ddc
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10469b3b
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33aa25d6
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c4b7b3d
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d0e61c3
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37741dfb
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65e53734
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a42afa4
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27a7eda1
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52520599
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18be5765
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62a8d104
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b891253
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ca803f6
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d07f148
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fe6cfbf
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38c979f7
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c575a0a
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@771edaef
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bf18048
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5664dcf7
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c5a95dc
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e5d779b
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68184171
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@706692c
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bab952e
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c3b2e15
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58a2cbe8
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@360ea78a
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:728 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e22bb12
+2021-02-24 08:36:11 [HikariPool-1 connection adder] DEBUG HikariPool:421 - HikariPool-1 - After adding stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:36:12 [restartedMain] INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-24 08:36:12 [restartedMain] INFO  LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-24 08:36:12 [restartedMain] INFO  OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+2021-02-24 08:36:12 [restartedMain] WARN  JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-24 08:36:12 [restartedMain] INFO  ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-24 08:36:13 [restartedMain] INFO  TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path '/sms'
+2021-02-24 08:36:13 [restartedMain] INFO  SmsApplication:61 - Started SmsApplication in 9.398 seconds (JVM running for 12.132)
+2021-02-24 08:36:13 [restartedMain] INFO  SmsApplication:17 - 
+  #####  #     #  #####  
+ #     # ##   ## #     # 
+ #       # # # # #       
+  #####  #  #  #  #####  
+       # #     #       # 
+ #     # #     # #     # 
+  #####  #     #  #####  
+2021-02-24 08:36:16 [http-nio-8080-exec-2] INFO  DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+2021-02-24 08:36:16 [http-nio-8080-exec-2] INFO  DispatcherServlet:547 - Completed initialization in 1 ms
+2021-02-24 08:36:16 [http-nio-8080-exec-2] DEBUG AuthController:36 - User authentication triggered...
+2021-02-24 08:36:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:36:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:36:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:37:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:37:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:37:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:37:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:37:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:37:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:38:10 [http-nio-8080-exec-5] DEBUG AuthController:36 - User authentication triggered...
+2021-02-24 08:38:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:38:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:38:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:38:21 [http-nio-8080-exec-7] DEBUG AuthController:36 - User authentication triggered...
+2021-02-24 08:38:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:38:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:38:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:39:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:39:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:39:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:39:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:39:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:39:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:40:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:40:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:40:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:40:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:40:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:40:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:41:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:41:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:41:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:41:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:41:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:41:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:42:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:42:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:42:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:42:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:42:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:42:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:43:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:43:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:43:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:43:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:43:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:43:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:44:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:44:10 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:44:10 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
+2021-02-24 08:44:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - Before cleanup stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:44:40 [HikariPool-1 housekeeper] DEBUG HikariPool:421 - HikariPool-1 - After cleanup  stats (total=50, active=0, idle=50, waiting=0)
+2021-02-24 08:44:40 [HikariPool-1 housekeeper] DEBUG HikariPool:517 - HikariPool-1 - Fill pool skipped, pool is at sufficient level.
