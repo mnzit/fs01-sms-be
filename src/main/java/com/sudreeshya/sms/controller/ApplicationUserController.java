@@ -60,4 +60,20 @@ public class ApplicationUserController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
+    @PostMapping(value = ApiPathConstants.SharedOperations.DELETE + "/" + ApiPathConstants.PathVariable.USERID_WRAPPER,
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> deleteApplicationUser
+            (@PathVariable(ApiPathConstants.PathVariable.USERID) Long id){
+        GenericResponse genericResponse = applicationUserService.deleteApplicationUser(id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = ApiPathConstants.SharedOperations.TRASH,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> findDeletedUsers(){
+        GenericResponse genericResponse = applicationUserService.findDeletedUsers();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
 }

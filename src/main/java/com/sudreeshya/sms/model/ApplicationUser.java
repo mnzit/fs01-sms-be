@@ -64,6 +64,12 @@ public class ApplicationUser extends Auditable<ApplicationUser>{
     )
     private String password;
 
+    @Column(name = "isActive",
+            columnDefinition = "CHAR default 'Y'",
+            length = 1,
+            nullable = false)
+    private Character isActive;
+
     public ApplicationUser(Long id){
         super(id);
     }
