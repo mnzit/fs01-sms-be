@@ -1,8 +1,6 @@
 package com.sudreeshya.sms.controller;
 
-import com.sudreeshya.sms.builder.ResponseBuilder;
-import com.sudreeshya.sms.constant.ApiPathConstants;
-import com.sudreeshya.sms.constant.ApiPathConstants;
+import com.sudreeshya.sms.constant.APIPathConstants;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.request.SaveCourseRequest;
 import com.sudreeshya.sms.request.UpdateCourseRequest;
@@ -12,10 +10,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.Media;
-
 @RestController
-@RequestMapping(ApiPathConstants.COURSES)
+@RequestMapping(APIPathConstants.COURSES)
 public class CourseController {
     private final CourseServiceImpl courseServiceImpl;
 
@@ -29,13 +25,13 @@ public class CourseController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @GetMapping(value = ApiPathConstants.PathVariable.COURSEID_WRAPPER)
-    public ResponseEntity<GenericResponse> findCourseById(@PathVariable(ApiPathConstants.PathVariable.COURSEID) long id) {
+    @GetMapping(value = APIPathConstants.PathVariable.COURSEID_WRAPPER)
+    public ResponseEntity<GenericResponse> findCourseById(@PathVariable(APIPathConstants.PathVariable.COURSEID) long id) {
         GenericResponse genericResponse = courseServiceImpl.findCourseById(id);
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @PostMapping(value = ApiPathConstants.SharedOperations.SAVE,
+    @PostMapping(value = APIPathConstants.SharedOperations.SAVE,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> saveCourse(@RequestBody SaveCourseRequest request){
@@ -43,12 +39,24 @@ public class CourseController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @PostMapping(value = ApiPathConstants.SharedOperations.UPDATE + "/" + ApiPathConstants.PathVariable.COURSEID_WRAPPER,
+    @PostMapping(value = APIPathConstants.SharedOperations.UPDATE + "/" + APIPathConstants.PathVariable.COURSEID_WRAPPER,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<GenericResponse> updateCourse(@PathVariable(ApiPathConstants.PathVariable.COURSEID) Long id,
+    public ResponseEntity<GenericResponse> updateCourse(@PathVariable(APIPathConstants.PathVariable.COURSEID) Long id,
                                                         @RequestBody UpdateCourseRequest request){
         GenericResponse genericResponse = courseServiceImpl.updateCourse(request, id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.DELETE + "/" + APIPathConstants.PathVariable.COURSEID_WRAPPER)
+    public ResponseEntity<GenericResponse> deleteCourse(@PathVariable(APIPathConstants.PathVariable.COURSEID) Long id){
+        GenericResponse genericResponse = courseServiceImpl.deleteCourse(id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.TRASH)
+    public ResponseEntity<GenericResponse> findDeletedCourses(){
+        GenericResponse genericResponse = courseServiceImpl.findDeletedCourses();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 

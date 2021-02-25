@@ -11,4 +11,5 @@ public class SubjectDTO {
     private String name;
     private String description;
     private String code;
+    private Character isActive;
 }

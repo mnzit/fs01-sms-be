@@ -36,82 +36,118 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         this.modelMapper = modelMapper;
     }
 
+
     @Override
     public GenericResponse getAllApplicationUser() {
-        final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
 
-        if (applicationUsers != null && applicationUsers.isEmpty()) {
-            return ResponseBuilder.buildFailure("Users not found");
+        final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
+        log.info("applicationUsers: {}" , applicationUsers);
+
+        if(applicationUsers.isEmpty()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
 
-        final List<UserDTO> response = applicationUsers
+        List<UserDTO> userDTOList = new ArrayList<>();
+
+
+        userDTOList = applicationUsers
                 .stream()
                 .map(applicationUser -> modelMapper.map(applicationUser, UserDTO.class))
                 .collect(Collectors.toList());
 
-        return ResponseBuilder.buildSuccess(ResponseMsgConstant.USERS_FOUND_SUCCESS, response);
+        log.info("userDTOList: {}", userDTOList);
+
+
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_FOUND, userDTOList);
     }
 
     @Override
     public GenericResponse getApplicationUserById(Long id) {
-
         Optional<ApplicationUser> applicationUser = applicationUserRepository.findById(id);
+        log.info("applicationUser: {}", applicationUser);
+        if(!applicationUser.isPresent()){
+            return ResponseBuilder.buildFailure("Could not find the user.");
+        }
+        else{
+            UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
+            if(response.getIsActive() == 'N'){
+                return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DELETED);
+            }
 
-        if (!applicationUser.isPresent()) {
-            return ResponseBuilder.buildFailure("User not found");
+            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_FOUND, response);
         }
-        UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
-        if(response.getIsActive() == 'N'){
-            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DETETED);
-        }
-        return ResponseBuilder.buildSuccess("User fetched Successfully", response);
     }
 
     @Override
     public GenericResponse saveApplicationUser(SaveUserRequest request) {
-
+        log.info("request: {}", request);
         ApplicationUser applicationUser = modelMapper.map(request, ApplicationUser.class);
+        log.info("applicationUser: {}", applicationUser);
         applicationUser.setCreatedBy(new ApplicationUser(1L));
-        log.debug("Saving applicationuser : {}", applicationUser);
+        applicationUser.setIsActive('Y');
+
+        List<ApplicationUser> applicationUserList = applicationUserRepository.findAll();
+
+        if(!applicationUserList.isEmpty()) {
+            for (ApplicationUser a : applicationUserList) {
+                if (a.getEmailAddress().equals(request.getEmailAddress())) {
+                    return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_ALREADY_PRESENT);
+                }
+            }
+
+
+            if (applicationUser.getFirstName().isEmpty() || applicationUser.getLastName().isEmpty() ||
+                    applicationUser.getPassword().isEmpty()) {
+                return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_CANT_BE_EMPTY);
+            }
+        }
         applicationUserRepository.save(applicationUser);
 
-        return ResponseBuilder.buildSuccess("User Saved Successfully");
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_SAVED);
+
     }
 
     @Override
     public GenericResponse updateApplicationUser(Long id, UpdateUserRequest request) {
-
-        Optional<ApplicationUser> optionalApplicationUser = applicationUserRepository.findById(id);
-
-        if (!optionalApplicationUser.isPresent()) {
-            return ResponseBuilder.buildFailure("User not found");
+        log.info("request: {}", request);
+        Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
+        if(!applicationUserOptional.isPresent()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
 
-        ApplicationUser applicationUser = modelMapper.map(request, ApplicationUser.class);
-        applicationUser.setId(id);
-        applicationUser.setCreatedBy(new ApplicationUser(1L));
-        applicationUser.setLastModifiedBy(new ApplicationUser(1L));
-        applicationUserRepository.save(applicationUser);
+        else {
+            ApplicationUser applicationUser = modelMapper.map(request, ApplicationUser.class);
 
-        return ResponseBuilder.buildSuccess("User Updated Successfully");
+            if(applicationUser.getFirstName().isEmpty() || applicationUser.getLastName().isEmpty() ||
+                    applicationUser.getPassword().isEmpty()){
+                return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_CANT_BE_EMPTY);
+            }
+
+            applicationUser.setId(id);
+            applicationUser.setCreatedBy(new ApplicationUser(1L));
+            applicationUser.setIsActive('Y');
+            applicationUserRepository.save(applicationUser);
+
+            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_UPDATED);
+        }
+
     }
 
     @Override
     public GenericResponse deleteApplicationUser(Long id) {
+        log.info("id: {}", id);
         Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
         log.info("Optional: {}", applicationUserOptional);
         if(!applicationUserOptional.isPresent()){
-            return ResponseBuilder.buildFailure(ResponseMsgConstant.USERS_FOUND_FAILURE);
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
 
         else{
             ApplicationUser applicationUser = new ApplicationUser();
             applicationUser = modelMapper.map(applicationUserOptional.get(), ApplicationUser.class);
-            log.info("After mapping to ApplicationUSer: {}", applicationUser);
             applicationUser.setIsActive('N');
             applicationUserRepository.save(applicationUser);
-            log.info("After saving to repository: {}", applicationUserRepository);
-            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_WAS_DETETED);
+            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_WAS_DELETED);
         }
     }
 
@@ -119,10 +155,8 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     public GenericResponse findDeletedUsers() {
         final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
         if(applicationUsers.isEmpty()){
-            return ResponseBuilder.buildFailure(ResponseMsgConstant.USERS_FOUND_FAILURE);
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
-        ApplicationUser applicationUser = new ApplicationUser();
-
         List<UserDTO> userDTOList = new ArrayList<>();
 
         userDTOList = applicationUsers
@@ -145,8 +179,10 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.NO_TRASH);
         }
         else{
-            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USERS_FOUND_SUCCESS, usersTrash);
+            return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_FOUND, usersTrash);
         }
 
     }
+
 }
+

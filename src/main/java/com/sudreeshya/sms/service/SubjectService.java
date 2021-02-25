@@ -14,4 +14,9 @@ public interface SubjectService {
     GenericResponse saveSubject(SaveSubjectRequest request);
 
     GenericResponse updateSubject(UpdateSubjectRequest request, Long id);
+
+    GenericResponse deleteSubject(Long id);
+
+    GenericResponse findDeletedSubjects();
+
 }

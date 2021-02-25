@@ -9,6 +9,7 @@ import com.sudreeshya.sms.request.AuthRequest;
 import com.sudreeshya.sms.response.dto.AuthSuccessResponse;
 import com.sudreeshya.sms.security.service.JWTService;
 import com.sudreeshya.sms.service.AuthenticationService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ import java.util.Optional;
  * @author Manjit Shakya
  * @email manjit.shakya@f1soft.com
  */
+@Slf4j
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
 
@@ -36,9 +38,12 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public GenericResponse login(AuthRequest request) {
-        Optional<ApplicationUser> user = applicationUserRepository.findByEmailAddress(request.getEmail());
+        log.info("authRequest: {}", request);
+        Optional<ApplicationUser> user = applicationUserRepository.findByEmailAddress(request.getEmailAddress());
+        log.info("user: {}", user);
         if (user.isPresent()) {
             ApplicationUser applicationUser = user.get();
+            log.info("applicationUser: {}", applicationUser);
             if (applicationUser.getPassword().equalsIgnoreCase(request.getPassword())) {
 
                 Long currentTime = System.currentTimeMillis();

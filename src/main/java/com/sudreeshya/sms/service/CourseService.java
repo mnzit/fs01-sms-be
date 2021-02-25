@@ -12,4 +12,8 @@ public interface CourseService {
     GenericResponse saveCourse(SaveCourseRequest request);
 
     GenericResponse updateCourse(UpdateCourseRequest request, Long id);
+
+    GenericResponse deleteCourse(Long id);
+
+    GenericResponse findDeletedCourses();
 }

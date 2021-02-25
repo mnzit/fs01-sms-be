@@ -1,6 +1,6 @@
 package com.sudreeshya.sms.controller;
 
-import com.sudreeshya.sms.constant.ApiPathConstants;
+import com.sudreeshya.sms.constant.APIPathConstants;
 
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.request.SaveSubjectRequest;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping(ApiPathConstants.SUBJECTS)
+@RequestMapping(APIPathConstants.SUBJECTS)
 public class SubjectController {
     private final SubjectServiceImpl subjectServiceImpl;
 
@@ -28,13 +28,13 @@ public class SubjectController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @GetMapping(value = ApiPathConstants.PathVariable.SUBJECTID_WRAPPER)
-    public ResponseEntity<GenericResponse> findSubjectById(@PathVariable(ApiPathConstants.PathVariable.SUBJECTID) long id){
+    @GetMapping(value = APIPathConstants.PathVariable.SUBJECTID_WRAPPER)
+    public ResponseEntity<GenericResponse> findSubjectById(@PathVariable(APIPathConstants.PathVariable.SUBJECTID) long id){
         GenericResponse genericResponse = subjectServiceImpl.findSubjectById(id);
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @PostMapping(value = ApiPathConstants.SharedOperations.SAVE,
+    @PostMapping(value = APIPathConstants.SharedOperations.SAVE,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> saveSubject(@RequestBody SaveSubjectRequest request){
@@ -42,12 +42,25 @@ public class SubjectController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @PostMapping(value =  ApiPathConstants.SharedOperations.UPDATE,
+    @PostMapping(value =  APIPathConstants.SharedOperations.UPDATE + "/" + APIPathConstants.PathVariable.SUBJECTID_WRAPPER,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<GenericResponse> updateSubject(@PathVariable(ApiPathConstants.PathVariable.SUBJECTID) Long id,
+    public ResponseEntity<GenericResponse> updateSubject(@PathVariable(APIPathConstants.PathVariable.SUBJECTID) Long id,
                                                          @RequestBody UpdateSubjectRequest request){
         GenericResponse genericResponse = subjectServiceImpl.updateSubject(request, id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.DELETE + "/" + APIPathConstants.PathVariable.SUBJECTID_WRAPPER)
+    public ResponseEntity<GenericResponse> deleteSubject(@PathVariable(APIPathConstants.PathVariable.SUBJECTID) Long id){
+        GenericResponse genericResponse = subjectServiceImpl.deleteSubject(id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.TRASH,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> findDeletedSubjects(){
+        GenericResponse genericResponse = subjectServiceImpl.findDeletedSubjects();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 }

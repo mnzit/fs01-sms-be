@@ -20,4 +20,5 @@ public class JwtDTO {
     private Long id;
     private Date expiryAt;
     private String emailAddress;
+
 }

@@ -27,14 +27,14 @@ public class ApplicationUser extends Auditable<ApplicationUser>{
             insertable = true,
             nullable = false
     )
-    private String firstname;
+    private String firstName;
     @Column(name = "LAST_NAME",
             length = 50,
             updatable = true,
             insertable = true,
             nullable = false
     )
-    private String lastname;
+    private String lastName;
     @Column(name = "ADDRESS",
             length = 100,
             updatable = true,
