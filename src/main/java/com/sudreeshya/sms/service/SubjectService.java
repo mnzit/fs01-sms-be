@@ -24,4 +24,6 @@ public interface SubjectService {
 
     GenericResponse rollBackDeletedSubjects(Long id);
 
+    GenericResponse rollBackAllSubjects();
+
 }

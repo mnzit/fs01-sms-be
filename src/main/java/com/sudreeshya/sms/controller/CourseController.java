@@ -75,4 +75,10 @@ public class CourseController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
+    @GetMapping(value = APIPathConstants.SharedOperations.ROLLBACK)
+    public ResponseEntity<GenericResponse> rollBackAllCourses(){
+        GenericResponse genericResponse = courseServiceImpl.rollBackAllCourses();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
 }

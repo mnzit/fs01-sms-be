@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.attribute.standard.Media;
 
 
 @RestController
@@ -75,6 +76,12 @@ public class SubjectController {
     produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> rollBackDeletedSubjects(@PathVariable(APIPathConstants.PathVariable.SUBJECTID) Long id){
         GenericResponse genericResponse = subjectServiceImpl.rollBackDeletedSubjects(id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ROLLBACK)
+    public ResponseEntity<GenericResponse> rollBackAllSubjects(){
+        GenericResponse genericResponse = subjectServiceImpl.rollBackAllSubjects();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 }

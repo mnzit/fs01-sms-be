@@ -89,5 +89,12 @@ public class ApplicationUserController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
+    @GetMapping(value = APIPathConstants.SharedOperations.ROLLBACK,
+    produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> rollBackAllUsers(){
+        GenericResponse genericResponse = applicationUserService.rollBackAllUsers();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
 
 }

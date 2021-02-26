@@ -23,43 +23,29 @@ public class ApplicationUser extends Auditable<ApplicationUser>{
 
     @Column(name = "FIRST_NAME",
             length = 50,
-            updatable = true,
-            insertable = true,
             nullable = false
     )
     private String firstName;
     @Column(name = "LAST_NAME",
             length = 50,
-            updatable = true,
-            insertable = true,
             nullable = false
     )
     private String lastName;
     @Column(name = "ADDRESS",
-            length = 100,
-            updatable = true,
-            insertable = true,
-            nullable = true
+            length = 100
     )
     private String address;
     @Column(name = "CONTACT_NO",
-            length = 20,
-            updatable = true,
-            insertable = true,
-            nullable = true
+            length = 20
     )
     private String contactNo;
     @Column(name = "EMAIL_ADDRESS",
             length = 50,
-            updatable = true,
-            insertable = true,
             nullable = false
     )
     private String emailAddress;
     @Column(name = "PASSWORD",
             length = 100,
-            updatable = true,
-            insertable = true,
             nullable = false
     )
     private String password;

@@ -187,5 +187,19 @@ public class SubjectServiceImpl implements SubjectService {
         return ResponseBuilder.buildSuccess(ResponseMsgConstant.SUBJECT_ROLLEDBACK);
 
     }
+    @Override
+    public GenericResponse rollBackAllSubjects(){
+        List<Subject> subjectList = subjectRepository.findAll();
+        if(subjectList.isEmpty()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_FOUND);
+        }
+        for(Subject s : subjectList){
+            if(s.getIsActive() == 'N'){
+                s.setIsActive('Y');
+                subjectRepository.save(s);
+            }
+        }
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.ALL_SUBJECTS_ROLLEDBACK);
+    }
 }
 
