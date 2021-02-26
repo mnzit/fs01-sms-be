@@ -32,6 +32,25 @@ public class SubjectServiceImpl implements SubjectService {
     }
 
     @Override
+    public GenericResponse findActiveSubjects(){
+        final List<Subject> subjectList = subjectRepository.findAll();
+        if(subjectList.isEmpty()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_FOUND);
+        }
+        List<SubjectDTO> subjectDTO = new ArrayList<>();
+        subjectDTO = subjectList.stream()
+                .map(subject -> modelMapper.map(subject, SubjectDTO.class))
+                .collect(Collectors.toList());
+        List<SubjectDTO> activeSubject = new ArrayList<>();
+        for(SubjectDTO s : subjectDTO){
+            if(s.getIsActive() == 'Y'){
+                activeSubject.add(s);
+            }
+        }
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.SUBJECT_FOUND, activeSubject);
+    }
+
+    @Override
     public GenericResponse findAllSubjects() {
         final List<Subject> subjectList = subjectRepository.findAll();
         if(subjectList.isEmpty()){
@@ -147,6 +166,26 @@ public class SubjectServiceImpl implements SubjectService {
         else {
             return ResponseBuilder.buildSuccess(ResponseMsgConstant.SUBJECT_FOUND, subjectTrash);
         }
+    }
+
+    @Override
+    public GenericResponse rollBackDeletedSubjects(Long id) {
+        Optional<Subject> subjectOptional = subjectRepository.findById(id);
+        if(!subjectOptional.isPresent()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_FOUND);
+        }
+        if(subjectOptional.get().getIsActive() == 'Y'){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_IN_TRASH);
+        }
+
+        Subject deletedSubject = new Subject();
+        deletedSubject = modelMapper.map(subjectOptional.get(), Subject.class);
+        deletedSubject.setId(id);
+        deletedSubject.setIsActive('Y');
+        subjectRepository.save(deletedSubject);
+
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.SUBJECT_ROLLEDBACK);
+
     }
 }
 

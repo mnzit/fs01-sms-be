@@ -10,6 +10,8 @@ import com.sudreeshya.sms.request.UpdateUserRequest;
  */
 public interface ApplicationUserService {
 
+    GenericResponse getActiveApplicationUser();
+
     GenericResponse getAllApplicationUser();
 
     GenericResponse getApplicationUserById(Long id);
@@ -21,4 +23,6 @@ public interface ApplicationUserService {
     GenericResponse deleteApplicationUser(Long id);
 
     GenericResponse findDeletedUsers();
+
+    GenericResponse rollBackDeletedUsers(Long id);
 }

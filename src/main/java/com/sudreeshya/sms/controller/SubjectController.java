@@ -23,6 +23,13 @@ public class SubjectController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> findActiveSubjects(){
+        GenericResponse genericResponse = subjectServiceImpl.findActiveSubjects();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ALL,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findAllSubjects(){
         GenericResponse genericResponse = subjectServiceImpl.findAllSubjects();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
@@ -61,6 +68,13 @@ public class SubjectController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findDeletedSubjects(){
         GenericResponse genericResponse = subjectServiceImpl.findDeletedSubjects();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ROLLBACK + "/" + APIPathConstants.PathVariable.SUBJECTID_WRAPPER,
+    produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> rollBackDeletedSubjects(@PathVariable(APIPathConstants.PathVariable.SUBJECTID) Long id){
+        GenericResponse genericResponse = subjectServiceImpl.rollBackDeletedSubjects(id);
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 }

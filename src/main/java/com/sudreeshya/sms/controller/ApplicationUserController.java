@@ -27,6 +27,13 @@ public class ApplicationUserController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> findActiveUsers(){
+        GenericResponse genericResponse = applicationUserService.getActiveApplicationUser();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ALL,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findAllUsers() {
         log.debug("User find all triggered...");
         GenericResponse genericResponse = applicationUserService.getAllApplicationUser();
@@ -74,5 +81,13 @@ public class ApplicationUserController {
         GenericResponse genericResponse = applicationUserService.findDeletedUsers();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ROLLBACK + "/" + APIPathConstants.PathVariable.USERID_WRAPPER,
+    produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> rollBackDeletedUser(@PathVariable(APIPathConstants.PathVariable.USERID) Long id){
+        GenericResponse genericResponse = applicationUserService.rollBackDeletedUsers(id);
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
 
 }

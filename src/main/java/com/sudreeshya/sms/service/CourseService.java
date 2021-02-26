@@ -5,6 +5,8 @@ import com.sudreeshya.sms.request.SaveCourseRequest;
 import com.sudreeshya.sms.request.UpdateCourseRequest;
 
 public interface CourseService {
+    GenericResponse findActiveCourses();
+
     GenericResponse findAllCourses();
 
     GenericResponse findCourseById(Long id);
@@ -16,4 +18,6 @@ public interface CourseService {
     GenericResponse deleteCourse(Long id);
 
     GenericResponse findDeletedCourses();
+
+    GenericResponse rollBackDeletedCourse(Long id);
 }

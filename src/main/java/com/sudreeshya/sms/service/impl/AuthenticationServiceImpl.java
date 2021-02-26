@@ -1,6 +1,7 @@
 package com.sudreeshya.sms.service.impl;
 
 import com.sudreeshya.sms.builder.ResponseBuilder;
+import com.sudreeshya.sms.constant.ResponseMsgConstant;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.dto.JwtDTO;
 import com.sudreeshya.sms.model.ApplicationUser;
@@ -43,6 +44,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         log.info("user: {}", user);
         if (user.isPresent()) {
             ApplicationUser applicationUser = user.get();
+            if(applicationUser.getIsActive() == 'N'){
+                return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DELETED);
+            }
             log.info("applicationUser: {}", applicationUser);
             if (applicationUser.getPassword().equalsIgnoreCase(request.getPassword())) {
 
@@ -63,6 +67,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
 
                 String token = jwtService.generateToken(jwtData);
+                log.info("token: {}", token);
                 return ResponseBuilder.buildSuccess("Login successful", new AuthSuccessResponse(token));
 
             } else {

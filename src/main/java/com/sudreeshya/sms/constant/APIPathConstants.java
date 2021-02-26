@@ -20,9 +20,11 @@ public interface APIPathConstants {
     }
 
     interface SharedOperations{
+        String ALL = "all";
         String SAVE ="save";
         String UPDATE = "update";
         String DELETE = "delete";
         String TRASH = "trash";
+        String ROLLBACK = "rollback";
     }
 }

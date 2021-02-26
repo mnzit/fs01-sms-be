@@ -7,6 +7,9 @@ import com.sudreeshya.sms.request.UpdateCourseRequest;
 import com.sudreeshya.sms.request.UpdateSubjectRequest;
 
 public interface SubjectService {
+
+    GenericResponse findActiveSubjects();
+
     GenericResponse findAllSubjects();
 
     GenericResponse findSubjectById(Long id);
@@ -18,5 +21,7 @@ public interface SubjectService {
     GenericResponse deleteSubject(Long id);
 
     GenericResponse findDeletedSubjects();
+
+    GenericResponse rollBackDeletedSubjects(Long id);
 
 }

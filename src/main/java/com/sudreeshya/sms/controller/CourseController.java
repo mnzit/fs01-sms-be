@@ -10,6 +10,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.attribute.standard.Media;
+
 @RestController
 @RequestMapping(APIPathConstants.COURSES)
 public class CourseController {
@@ -20,6 +22,13 @@ public class CourseController {
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<GenericResponse> findActiveCourses(){
+        GenericResponse genericResponse = courseServiceImpl.findActiveCourses();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ALL,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findAllCourses() {
         GenericResponse genericResponse = courseServiceImpl.findAllCourses();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
@@ -57,6 +66,12 @@ public class CourseController {
     @GetMapping(value = APIPathConstants.SharedOperations.TRASH)
     public ResponseEntity<GenericResponse> findDeletedCourses(){
         GenericResponse genericResponse = courseServiceImpl.findDeletedCourses();
+        return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.ROLLBACK + "/" + APIPathConstants.PathVariable.COURSEID_WRAPPER)
+    public ResponseEntity<GenericResponse> rollBackDeletedCourses(@PathVariable(APIPathConstants.PathVariable.COURSEID) Long id){
+        GenericResponse genericResponse = courseServiceImpl.rollBackDeletedCourse(id);
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 

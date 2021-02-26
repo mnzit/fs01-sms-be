@@ -10,6 +10,7 @@ import com.sudreeshya.sms.request.UpdateUserRequest;
 import com.sudreeshya.sms.response.dto.UserDTO;
 import com.sudreeshya.sms.service.ApplicationUserService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,25 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         this.modelMapper = modelMapper;
     }
 
+
+    @Override
+    public GenericResponse getActiveApplicationUser(){
+        final List<ApplicationUser> allUsers = applicationUserRepository.findAll();
+        if(allUsers.isEmpty()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
+        }
+        List<UserDTO> userDTOList = new ArrayList<>();
+        userDTOList = allUsers.stream()
+                .map(applicationUser -> modelMapper.map(applicationUser, UserDTO.class))
+                .collect(Collectors.toList());
+        List<UserDTO> activeUsers = new ArrayList<>();
+        for(UserDTO u : userDTOList){
+            if(u.getIsActive() == 'Y'){
+                activeUsers.add(u);
+            }
+        }
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_FOUND, activeUsers);
+    }
 
     @Override
     public GenericResponse getAllApplicationUser() {
@@ -182,6 +202,22 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
             return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_FOUND, usersTrash);
         }
 
+  }
+    @Override
+    public GenericResponse rollBackDeletedUsers(Long id){
+        Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
+        if(!applicationUserOptional.isPresent()){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
+        }
+        if(applicationUserOptional.get().getIsActive() == 'Y'){
+            return ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_IN_TRASH);
+        }
+        ApplicationUser deletedApplicationUser = new ApplicationUser();
+        deletedApplicationUser = modelMapper.map(applicationUserOptional.get(), ApplicationUser.class);
+        deletedApplicationUser.setId(id);
+        deletedApplicationUser.setIsActive('Y');
+        applicationUserRepository.save(deletedApplicationUser);
+        return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_ROLLEDBACK);
     }
 
 }

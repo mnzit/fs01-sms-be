@@ -8,6 +8,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class SubjectDTO {
+    private Long id;
     private String name;
     private String description;
     private String code;
