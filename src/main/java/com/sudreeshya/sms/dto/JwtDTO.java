@@ -21,4 +21,15 @@ public class JwtDTO {
     private Date expiryAt;
     private String emailAddress;
 
+    @Override
+    public String toString() {
+        return "JwtDTO{" +
+                "claims=" + claims +
+                ", issueAt=" + issueAt +
+                ", issuer='" + issuer + '\'' +
+                ", id=" + id +
+                ", expiryAt=" + expiryAt +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
+    }
 }
