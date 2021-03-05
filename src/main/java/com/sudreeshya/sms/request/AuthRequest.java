@@ -13,6 +13,6 @@ import java.io.Serializable;
 @Setter
 public class AuthRequest implements Serializable {
 
-    private String email;
+    private String emailAddress;
     private String password;
 }

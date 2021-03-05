@@ -1,5 +1,7 @@
 package com.sudreeshya.sms.model;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -8,7 +10,13 @@ import javax.persistence.Table;
  * @author Manjit Shakya
  * @email manjit.shakya@f1soft.com
  */
+
 @Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name = "TBL_COURSES")
 public class Course extends Auditable<ApplicationUser>{
 
@@ -33,4 +41,14 @@ public class Course extends Auditable<ApplicationUser>{
             nullable = true
     )
     private String code;
+
+    @Column(name = "isActive",
+            columnDefinition = "CHAR default 'Y'",
+            length = 1,
+            nullable = false)
+    private Character isActive;
+
+    public Course(Long id){
+        super(id);
+    }
 }

@@ -2,6 +2,7 @@ package com.sudreeshya.sms.response.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -11,11 +12,13 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
+@ToString
 public class UserDTO implements Serializable {
     private Long id;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
     private String address;
     private String contactNo;
     private String emailAddress;
+    private Character isActive;
 }

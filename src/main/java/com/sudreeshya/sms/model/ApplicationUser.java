@@ -27,14 +27,14 @@ public class ApplicationUser extends Auditable<ApplicationUser>{
             insertable = true,
             nullable = false
     )
-    private String firstname;
+    private String firstName;
     @Column(name = "LAST_NAME",
             length = 50,
             updatable = true,
             insertable = true,
             nullable = false
     )
-    private String lastname;
+    private String lastName;
     @Column(name = "ADDRESS",
             length = 100,
             updatable = true,
@@ -63,6 +63,12 @@ public class ApplicationUser extends Auditable<ApplicationUser>{
             nullable = false
     )
     private String password;
+
+    @Column(name = "isActive",
+            columnDefinition = "CHAR default 'Y'",
+            length = 1,
+            nullable = false)
+    private Character isActive;
 
     public ApplicationUser(Long id){
         super(id);
