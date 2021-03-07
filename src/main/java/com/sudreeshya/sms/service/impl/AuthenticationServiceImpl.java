@@ -51,7 +51,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
                 Map<String, Object> role = new HashMap<>();
 
-                role.put("role","user");
+                role.put("name", applicationUser.getFirstName());
                 final JwtDTO jwtData = JwtDTO
                         .builder()
                         .claims(role)

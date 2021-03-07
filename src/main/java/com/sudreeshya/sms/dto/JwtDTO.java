@@ -2,6 +2,7 @@ package com.sudreeshya.sms.dto;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.Map;
 @Getter
 @Builder
 public class JwtDTO {
-
+    private boolean authenticated;
     private Map<String, Object> claims;
     private Date issueAt;
     private String issuer = "SMS";

@@ -9,6 +9,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.Date;
 import java.util.Optional;
 
@@ -23,6 +25,7 @@ public class JWTServiceImpl implements JWTService<JwtDTO> {
 
     @Override
     public String generateToken(JwtDTO source) {
+        String base64EncodedSecretKey = Base64.getEncoder().encodeToString(secretKey.getBytes(StandardCharsets.UTF_8));
         return Jwts
                 .builder()
                 .setClaims(source.getClaims())
@@ -31,17 +34,18 @@ public class JWTServiceImpl implements JWTService<JwtDTO> {
                 .setIssuedAt(source.getIssueAt())
                 .setIssuer(source.getIssuer())
                 .setId(source.getId().toString())
-                .signWith(SignatureAlgorithm.HS512, secretKey.getBytes())
+                // signWith accepts Base64 encoded secret key
+                .signWith(SignatureAlgorithm.HS512, base64EncodedSecretKey)
                 .compact();
     }
 
     @Override
-    public Optional<JwtDTO> verifyToken(String token) {
-        JwtDTO jwtDTO = null;
+    public JwtDTO verifyToken(String token) {
+        final JwtDTO.JwtDTOBuilder jwtDTOBuilder = JwtDTO.builder();
         //This line will throw an exception if it is not a signed JWS (as expected)
         try {
             final Jws<Claims> claimsJws = Jwts.parser()
-                    .setSigningKey(secretKey)
+                    .setSigningKey(secretKey.getBytes(StandardCharsets.UTF_8))
                     .parseClaimsJws(token);
 
             final Claims body = claimsJws.getBody();
@@ -50,9 +54,9 @@ public class JWTServiceImpl implements JWTService<JwtDTO> {
 
             log.debug("Expires in: {}", expiration);
 
-            jwtDTO = JwtDTO
-                    .builder()
-                    .claims(null)
+            return jwtDTOBuilder
+                    .authenticated(true)
+                    .claims(body)
                     .emailAddress(body.getSubject())
                     .issueAt(body.getIssuedAt())
                     .issuer(body.getIssuer())
@@ -60,12 +64,10 @@ public class JWTServiceImpl implements JWTService<JwtDTO> {
                     .id(Long.valueOf(body.getId()))
                     .build();
 
-            log.debug("Token data :{}", jwtDTO);
-
         } catch (Exception ex) {
             log.debug("Exception verifying the token: {}", ex.getMessage());
         }
 
-        return Optional.of(jwtDTO);
+        return jwtDTOBuilder.build();
     }
 }

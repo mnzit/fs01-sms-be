@@ -13,7 +13,6 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Optional;
 
 /**
  * @author Manjit Shakya
@@ -41,17 +40,22 @@ public class JWTAuthFilter implements Filter {
 
         String token = request.getHeader("Authorization"); // key
         log.debug("Jwt token : {}", token);
-        final Optional<JwtDTO> jwtData = jwtService.verifyToken(token);
+        final JwtDTO jwtData = jwtService.verifyToken(token);
+        log.debug("isAuth: {}", jwtData.isAuthenticated());
 
-        if (!jwtData.isPresent()) {
+        if (!jwtData.isAuthenticated()) {
+
             final GenericResponse genericResponse = ResponseBuilder.buildFailure("Unauthorized");
             String responseString = new ObjectMapper().writeValueAsString(genericResponse);
             response.setContentType("application/json");
             response.setStatus(401);
             response.getOutputStream().write(responseString.getBytes());
+
+        } else {
+            // go to the next filter in the filter chain
+            filterChain.doFilter(request, response);
         }
 
-        // go to the next filter in the filter chain
-        filterChain.doFilter(request, response);
+
     }
 }
