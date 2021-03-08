@@ -193,12 +193,20 @@ public class SubjectServiceImpl implements SubjectService {
         if(subjectList.isEmpty()){
             return ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_FOUND);
         }
+        List<Subject> subjectTrash = new ArrayList<>();
         for(Subject s : subjectList){
             if(s.getIsActive() == 'N'){
-                s.setIsActive('Y');
-                subjectRepository.save(s);
+                subjectTrash.add(s);
             }
         }
+        if(subjectTrash.isEmpty()){
+            ResponseBuilder.buildFailure(ResponseMsgConstant.SUBJECT_NOT_IN_TRASH);
+        }
+        for(Subject s : subjectTrash){
+            s.setIsActive('Y');
+            subjectRepository.save(s);
+        }
+
         return ResponseBuilder.buildSuccess(ResponseMsgConstant.ALL_SUBJECTS_ROLLEDBACK);
     }
 }

@@ -226,11 +226,18 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         if(applicationUserList.isEmpty()){
             ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
+        List<ApplicationUser> applicationUsersTrash = new ArrayList<>();
         for(ApplicationUser a : applicationUserList){
             if(a.getIsActive() == 'N'){
-                a.setIsActive('Y');
-                applicationUserRepository.save(a);
+                applicationUsersTrash.add(a);
             }
+        }
+        if(applicationUsersTrash.isEmpty()){
+            ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_IN_TRASH);
+        }
+        for(ApplicationUser a : applicationUsersTrash){
+            a.setIsActive('Y');
+            applicationUserRepository.save(a);
         }
 
         return ResponseBuilder.buildSuccess(ResponseMsgConstant.ALL_USERS_ROLLEDBACK);
