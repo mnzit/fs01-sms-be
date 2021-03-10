@@ -6,13 +6,13 @@ package com.sudreeshya.sms.constant;
  */
 public interface ResponseMsgConstant {
 
-    String USER_SAVED = "Users are stored in Database successfully!";
+    String USER_SAVED = "Users are stored successfully!";
     String USER_UPDATED = "User was updated successfully!";
     String USER_NOT_FOUND = "Could not find the User!";
-    String USER_FOUND = "User was found in the database!";
-    String USER_WAS_DELETED = "The User you were looking for was deleted!";
-    String USER_DELETED = "The User is deleted successfully!";
-    String NO_TRASH = "No users are in Trash Bin!";
+    String USER_FOUND = "User was found!";
+    String USER_WAS_DELETED = "User you were looking for was deleted!";
+    String USER_DELETED = "User is deleted successfully!";
+    String NO_TRASH = "No users are in trash!";
     String USER_ALREADY_PRESENT = "The email address you used is already registered!";
     String USER_CANT_BE_EMPTY ="Name/Password can't be empty!";
 

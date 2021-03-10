@@ -2,6 +2,7 @@ package com.sudreeshya.sms.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sudreeshya.sms.builder.ResponseBuilder;
+import com.sudreeshya.sms.constant.SecurityConstant;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.dto.JwtDTO;
 import com.sudreeshya.sms.security.service.JWTService;
@@ -30,6 +31,8 @@ public class JWTAuthFilter implements Filter {
                          ServletResponse servletResponse,
                          FilterChain filterChain)
             throws IOException, ServletException {
+
+        log.debug("Reached Authorization filter");
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
@@ -38,19 +41,32 @@ public class JWTAuthFilter implements Filter {
             return;
         }
 
-        String token = request.getHeader("Authorization"); // key
+        String token = request.getHeader(SecurityConstant.JWT_TOKEN_KEY); // key
+
+        if (token == null) {
+            buildFailure(response, "Authorization token not found");
+            return;
+        }
+
+        if (!token.contains(SecurityConstant.JWT_TOKEN_PREFIX)) {
+            buildFailure(response, "Authorization token not found");
+            return;
+        }
+
+        token = token.replace(SecurityConstant.JWT_TOKEN_PREFIX, "");
+
+        if (!(token.trim().length() > 0)) {
+            buildFailure(response, "Authorization token not found");
+            return;
+        }
+
         log.debug("Jwt token : {}", token);
         final JwtDTO jwtData = jwtService.verifyToken(token);
         log.debug("isAuth: {}", jwtData.isAuthenticated());
 
         if (!jwtData.isAuthenticated()) {
-
-            final GenericResponse genericResponse = ResponseBuilder.buildFailure("Unauthorized");
-            String responseString = new ObjectMapper().writeValueAsString(genericResponse);
-            response.setContentType("application/json");
-            response.setStatus(401);
-            response.getOutputStream().write(responseString.getBytes());
-
+            buildFailure(response, "Unauthorized");
+            return;
         } else {
             // go to the next filter in the filter chain
             filterChain.doFilter(request, response);
@@ -58,4 +74,13 @@ public class JWTAuthFilter implements Filter {
 
 
     }
+
+    public void buildFailure(HttpServletResponse response, String msg) throws IOException {
+        final GenericResponse genericResponse = ResponseBuilder.buildFailure(msg);
+        String responseString = new ObjectMapper().writeValueAsString(genericResponse);
+        response.setContentType("application/json");
+        response.setStatus(401);
+        response.getOutputStream().write(responseString.getBytes());
+    }
+
 }

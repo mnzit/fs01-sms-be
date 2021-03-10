@@ -1,11 +1,13 @@
 package com.sudreeshya.sms.controller;
 
+import com.sudreeshya.sms.constant.SecurityConstant;
 import com.sudreeshya.sms.constant.APIPathConstants;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.request.AuthRequest;
+import com.sudreeshya.sms.response.dto.AuthSuccessResponse;
 import com.sudreeshya.sms.service.AuthenticationService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +33,15 @@ public class AuthController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> login(@RequestBody AuthRequest request) {
         log.debug("User authentication triggered...");
-        GenericResponse response = authenticationService.login(request);
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        GenericResponse genericResponse = authenticationService.login(request);
+        AuthSuccessResponse response = (AuthSuccessResponse) genericResponse.getData();
+
+        HttpHeaders httpHeaders = new HttpHeaders();
+        httpHeaders.add(SecurityConstant.JWT_TOKEN_KEY, SecurityConstant.JWT_TOKEN_PREFIX + response.getToken());
+        genericResponse.setData(null);
+
+        return ResponseEntity.ok()
+                .headers(httpHeaders)
+                .body(genericResponse);
     }
 }
