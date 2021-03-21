@@ -9,8 +9,12 @@ import com.sudreeshya.sms.request.AuthRequest;
 import com.sudreeshya.sms.response.dto.AuthSuccessResponse;
 import com.sudreeshya.sms.security.service.JWTService;
 import com.sudreeshya.sms.service.AuthenticationService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -24,20 +28,19 @@ import java.util.Optional;
  */
 @Slf4j
 @Service
+@AllArgsConstructor
 public class AuthenticationServiceImpl implements AuthenticationService {
 
     private final ApplicationUserRepository applicationUserRepository;
     private final JWTService jwtService;
-
-    @Autowired
-    public AuthenticationServiceImpl(ApplicationUserRepository applicationUserRepository,
-                                     JWTService jwtService) {
-        this.applicationUserRepository = applicationUserRepository;
-        this.jwtService = jwtService;
-    }
+    private final AuthenticationManager authenticationManager;
 
     @Override
     public GenericResponse login(AuthRequest request) {
+
+        Authentication authentication = authenticationManager
+                .authenticate(new UsernamePasswordAuthenticationToken(request.getEmailAddress(), request.getPassword()));
+
         log.info("authRequest: {}", request);
         Optional<ApplicationUser> user = applicationUserRepository.findByEmailAddress(request.getEmailAddress());
         log.info("user: {}", user);

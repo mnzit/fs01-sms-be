@@ -5,12 +5,13 @@ import com.sudreeshya.sms.builder.ResponseBuilder;
 import com.sudreeshya.sms.constant.SecurityConstant;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.dto.JwtDTO;
-import com.sudreeshya.sms.security.service.JWTService;
+import com.sudreeshya.sms.model.ApplicationUser;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
 
-import javax.servlet.*;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -19,22 +20,13 @@ import java.io.IOException;
  * @author Manjit Shakya
  * @email manjit.shakya@f1soft.com
  */
-@Component
 @Slf4j
 @AllArgsConstructor
-public class JWTAuthFilter implements Filter {
-
-    private final JWTService<JwtDTO> jwtService;
+public class JWTAuthFilter extends OncePerRequestFilter {
 
     @Override
-    public void doFilter(ServletRequest servletRequest,
-                         ServletResponse servletResponse,
-                         FilterChain filterChain)
-            throws IOException, ServletException {
-
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.debug("Reached Authorization filter");
-        HttpServletRequest request = (HttpServletRequest) servletRequest;
-        HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         if (request.getRequestURI().contains("login")) {
             filterChain.doFilter(request, response);
@@ -59,19 +51,6 @@ public class JWTAuthFilter implements Filter {
             buildFailure(response, "Authorization token not found");
             return;
         }
-
-        log.debug("Jwt token : {}", token);
-        final JwtDTO jwtData = jwtService.verifyToken(token);
-        log.debug("isAuth: {}", jwtData.isAuthenticated());
-
-        if (!jwtData.isAuthenticated()) {
-            buildFailure(response, "Unauthorized");
-            return;
-        } else {
-            // go to the next filter in the filter chain
-            filterChain.doFilter(request, response);
-        }
-
 
     }
 
