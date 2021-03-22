@@ -5,6 +5,7 @@ import com.sudreeshya.sms.model.ApplicationUser;
 import com.sudreeshya.sms.repository.ApplicationUserRepository;
 import javafx.application.Application;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -15,10 +16,9 @@ import org.springframework.stereotype.Service;
  * @email manjit.shakya@f1soft.com
  */
 @Service
-@AllArgsConstructor
 public class JdbcUserDetailService implements UserDetailsService {
-
-    private final ApplicationUserRepository applicationUserRepository;
+    @Autowired
+    private ApplicationUserRepository applicationUserRepository;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
