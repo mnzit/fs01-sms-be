@@ -5,9 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * @author Manjit Shakya
@@ -19,7 +18,7 @@ import javax.persistence.Table;
 @Entity
 @NoArgsConstructor
 @Table(name = "TBL_APPLICATION_USER")
-public class ApplicationUser extends Auditable<ApplicationUser>{
+public class ApplicationUser extends Auditable<ApplicationUser> {
 
     @Column(name = "FIRST_NAME",
             length = 50,
@@ -70,7 +69,24 @@ public class ApplicationUser extends Auditable<ApplicationUser>{
             nullable = false)
     private Character isActive;
 
-    public ApplicationUser(Long id){
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "tbl_application_user_authority",
+            joinColumns = {
+                    @JoinColumn(name = "application_user_id", referencedColumnName = "id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "authority_id", referencedColumnName = "id")
+            }
+    )
+    private List<Authority> authorities;
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "COURSE_ID", referencedColumnName = "id")
+    private Course course;
+
+
+    public ApplicationUser(Long id) {
         super(id);
     }
 }

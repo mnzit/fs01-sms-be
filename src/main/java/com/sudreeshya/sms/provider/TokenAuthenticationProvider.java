@@ -5,10 +5,10 @@ import com.sudreeshya.sms.dto.CustomUserDetail;
 import com.sudreeshya.sms.dto.JwtDTO;
 import com.sudreeshya.sms.model.ApplicationUser;
 import com.sudreeshya.sms.security.service.JWTService;
+import com.sudreeshya.sms.util.AuthorityUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -31,24 +31,22 @@ public class TokenAuthenticationProvider implements AuthenticationProvider {
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
-        JwtAuthenticationToken jwtAuthenticationToken = (JwtAuthenticationToken) authentication;
-        String token = jwtAuthenticationToken.getToken();
-        log.debug("Jwt token : {}", token);
+        final JwtAuthenticationToken jwtAuthenticationToken = (JwtAuthenticationToken) authentication;
+        final String token = jwtAuthenticationToken.getToken();
         final JwtDTO jwtData = (JwtDTO) jwtService.verifyToken(token);
-        log.debug("isAuth: {}", jwtData.isAuthenticated());
-
         final UserDetails userDetails = userDetailsService.loadUserByUsername(jwtData.getEmailAddress());
         final CustomUserDetail customUserDetail = (CustomUserDetail) userDetails;
         final ApplicationUser applicationUser = customUserDetail.getApplicationUser();
-        final Authentication afterAuthenticated =
+        authentication =
                 new JwtAuthenticationToken(
                         applicationUser,
                         applicationUser.getPassword(),
-                        null
+                        AuthorityUtil
+                                .buildAuthorities(applicationUser.getAuthorities())
                 );
 
         // updating the thread local with the currently logged in user
-        SecurityContextHolder.getContext().setAuthentication(afterAuthenticated);
+        SecurityContextHolder.getContext().setAuthentication(authentication);
         return authentication;
     }
 
@@ -57,7 +55,7 @@ public class TokenAuthenticationProvider implements AuthenticationProvider {
         return token.equals(JwtAuthenticationToken.class);
     }
 
-    public void setUserDetails(UserDetailsService userDetailsService){
+    public void setUserDetails(UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 }

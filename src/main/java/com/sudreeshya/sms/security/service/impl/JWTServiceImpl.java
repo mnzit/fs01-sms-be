@@ -1,6 +1,7 @@
 package com.sudreeshya.sms.security.service.impl;
 
 import com.sudreeshya.sms.dto.JwtDTO;
+import com.sudreeshya.sms.provider.InvalidJwtException;
 import com.sudreeshya.sms.security.service.JWTService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -39,10 +40,10 @@ public class JWTServiceImpl implements JWTService<JwtDTO> {
     }
 
     @Override
-    public JwtDTO verifyToken(String token) {
+    public JwtDTO verifyToken(String token) throws InvalidJwtException {
         final JwtDTO.JwtDTOBuilder jwtDTOBuilder = JwtDTO.builder();
         //This line will throw an exception if it is not a signed JWS (as expected)
-        try {
+
             final Jws<Claims> claimsJws = Jwts.parser()
                     .setSigningKey(secretKey.getBytes(StandardCharsets.UTF_8))
                     .parseClaimsJws(token);
@@ -62,11 +63,5 @@ public class JWTServiceImpl implements JWTService<JwtDTO> {
                     .expiryAt(body.getExpiration())
                     .id(Long.valueOf(body.getId()))
                     .build();
-
-        } catch (Exception ex) {
-            log.debug("Exception verifying the token: {}", ex.getMessage());
-        }
-
-        return jwtDTOBuilder.build();
     }
 }

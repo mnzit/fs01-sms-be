@@ -4,6 +4,7 @@ import com.sudreeshya.sms.builder.ResponseBuilder;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.dto.JwtDTO;
 import com.sudreeshya.sms.model.ApplicationUser;
+import com.sudreeshya.sms.model.Authority;
 import com.sudreeshya.sms.repository.ApplicationUserRepository;
 import com.sudreeshya.sms.request.AuthRequest;
 import com.sudreeshya.sms.response.dto.AuthSuccessResponse;
@@ -11,7 +12,6 @@ import com.sudreeshya.sms.security.service.JWTService;
 import com.sudreeshya.sms.service.AuthenticationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -21,6 +21,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @author Manjit Shakya
@@ -52,12 +53,18 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 Long currentTime = System.currentTimeMillis();
                 Long expiryInSeconds = 300L;
 
-                Map<String, Object> role = new HashMap<>();
+                Map<String, Object> claims = new HashMap<>();
+                String authorities = applicationUser
+                        .getAuthorities()
+                        .stream()
+                        .map(Authority::getName)
+                        .collect(Collectors.joining(","));
 
-                role.put("name", applicationUser.getFirstName());
+                claims.put("authorities", authorities);
+
                 final JwtDTO jwtData = JwtDTO
                         .builder()
-                        .claims(role)
+                        .claims(claims)
                         .emailAddress(applicationUser.getEmailAddress())
                         .issueAt(new Date(currentTime))
                         .expiryAt(new Date(currentTime + expiryInSeconds * 1000))
