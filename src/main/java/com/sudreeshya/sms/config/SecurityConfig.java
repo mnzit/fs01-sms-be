@@ -1,5 +1,6 @@
 package com.sudreeshya.sms.config;
 
+import com.google.common.collect.Lists;
 import com.sudreeshya.sms.auth.url.SecurePath;
 import com.sudreeshya.sms.filter.AuthenticationErrorEntry;
 import com.sudreeshya.sms.filter.JwtAuthenticationFailureHandler;
@@ -22,6 +23,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Manjit Shakya
