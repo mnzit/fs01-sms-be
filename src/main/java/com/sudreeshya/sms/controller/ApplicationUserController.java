@@ -1,6 +1,5 @@
 package com.sudreeshya.sms.controller;
 
-import com.sudreeshya.sms.aop.annotation.MethodLogger;
 import com.sudreeshya.sms.constant.APIPathConstants;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.request.SaveUserRequest;
@@ -27,28 +26,18 @@ public class ApplicationUserController {
         this.applicationUserService = applicationUserService;
     }
 
-    @MethodLogger
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findAllUsers() {
         GenericResponse genericResponse = applicationUserService.getAllApplicationUser();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @MethodLogger
-    @GetMapping(value = "test",
-            produces = MediaType.APPLICATION_JSON_VALUE)
-    public String test() {
-        return "Test Success";
-    }
-
-    @MethodLogger
     @GetMapping(value = APIPathConstants.PathVariable.USERID_WRAPPER, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findUserById(@PathVariable(APIPathConstants.PathVariable.USERID) Long id) {
         GenericResponse genericResponse = applicationUserService.getApplicationUserById(id);
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @MethodLogger
     @PostMapping(value = APIPathConstants.SharedOperations.SAVE,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)

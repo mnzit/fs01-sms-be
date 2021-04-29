@@ -18,4 +18,6 @@ public class AuthSuccessResponse implements Serializable {
 
     @JsonIgnore
     private String token;
+
+    private String authorities;
 }

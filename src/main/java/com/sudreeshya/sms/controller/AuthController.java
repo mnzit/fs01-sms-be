@@ -38,8 +38,6 @@ public class AuthController {
 
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add(SecurityConstant.JWT_TOKEN_KEY, SecurityConstant.JWT_TOKEN_PREFIX + response.getToken());
-        genericResponse.setData(null);
-
         return ResponseEntity.ok()
                 .headers(httpHeaders)
                 .body(genericResponse);

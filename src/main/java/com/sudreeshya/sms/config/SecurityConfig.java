@@ -18,6 +18,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -77,12 +78,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public AuthenticationProvider usernamePasswordBasedProvider() {
         final UsernamePasswordAuthenticationProvider usernamePasswordAuthenticationProvider = new UsernamePasswordAuthenticationProvider();
         usernamePasswordAuthenticationProvider.setUserDetails(userDetailsService());
+        usernamePasswordAuthenticationProvider.setPasswordEncoder(passwordEncoder());
         return usernamePasswordAuthenticationProvider;
     }
 
     @Bean
     PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        return new BCryptPasswordEncoder();
     }
 
     @Bean(name = BeanIds.AUTHENTICATION_MANAGER)

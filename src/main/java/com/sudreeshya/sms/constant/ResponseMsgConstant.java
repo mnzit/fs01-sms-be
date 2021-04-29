@@ -35,4 +35,7 @@ public interface ResponseMsgConstant {
     String EMAIL_PASSWORD_INCORRECT = "The username/password you entered is incorrect!";
     String LOGIN_SUCCESSFUL = "The login was successful!";
     String AUTH_SUCCESSFUL = "Authentication was successful!";
+
+    String AUTHORITIES_NOT_FOUND = "Could not find the Authorities!";
+    String AUTHORITIES_FOUND = "Authorities fetched successfully";
 }

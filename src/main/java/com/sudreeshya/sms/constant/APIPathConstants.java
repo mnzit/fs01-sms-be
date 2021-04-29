@@ -9,6 +9,7 @@ public interface APIPathConstants {
     String COURSES = "courses";
     String SUBJECTS = "subjects";
     String LOGIN = "login";
+    String AUTHORITIES = "authorities";
 
     interface PathVariable{
         String USERID_WRAPPER = "{userId}";

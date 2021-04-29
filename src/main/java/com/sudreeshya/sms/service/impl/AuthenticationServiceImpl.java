@@ -15,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -35,6 +36,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private final ApplicationUserRepository applicationUserRepository;
     private final JWTService jwtService;
     private final AuthenticationManager authenticationManager;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public GenericResponse login(AuthRequest request) {
@@ -48,7 +50,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         if (user.isPresent()) {
             ApplicationUser applicationUser = user.get();
             log.info("applicationUser: {}", applicationUser);
-            if (applicationUser.getPassword().equalsIgnoreCase(request.getPassword())) {
 
                 Long currentTime = System.currentTimeMillis();
                 Long expiryInSeconds = 300L;
@@ -71,15 +72,11 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                         .id(applicationUser.getId())
                         .build();
 
-
                 String token = jwtService.generateToken(jwtData);
-                return ResponseBuilder.buildSuccess("Login successful", new AuthSuccessResponse(token));
+                return ResponseBuilder.buildSuccess("Login successful", new AuthSuccessResponse(token,authorities));
 
             } else {
                 return ResponseBuilder.buildFailure("Username or Password is incorrect");
             }
-        } else {
-            return ResponseBuilder.buildFailure("Username or Password is incorrect");
-        }
     }
 }

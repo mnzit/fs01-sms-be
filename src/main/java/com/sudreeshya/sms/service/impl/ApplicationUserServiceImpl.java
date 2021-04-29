@@ -4,16 +4,22 @@ import com.sudreeshya.sms.builder.ResponseBuilder;
 import com.sudreeshya.sms.constant.ResponseMsgConstant;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.model.ApplicationUser;
+import com.sudreeshya.sms.repository.AuthorityRepository;
 import com.sudreeshya.sms.repository.ApplicationUserRepository;
 import com.sudreeshya.sms.request.SaveUserRequest;
 import com.sudreeshya.sms.request.UpdateUserRequest;
 import com.sudreeshya.sms.response.dto.UserDTO;
 import com.sudreeshya.sms.service.ApplicationUserService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -25,25 +31,23 @@ import java.util.stream.Collectors;
  */
 @Slf4j
 @Service
+@AllArgsConstructor
 public class ApplicationUserServiceImpl implements ApplicationUserService {
 
     private final ApplicationUserRepository applicationUserRepository;
     private final ModelMapper modelMapper;
-
-    @Autowired
-    public ApplicationUserServiceImpl(ApplicationUserRepository applicationUserRepository, ModelMapper modelMapper) {
-        this.applicationUserRepository = applicationUserRepository;
-        this.modelMapper = modelMapper;
-    }
+    private final PasswordEncoder passwordEncoder;
+    private final AuthorityRepository authorityRepository;
+    private final JavaMailSender emailSender;
 
 
     @Override
     public GenericResponse getAllApplicationUser() {
 
         final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
-        log.info("applicationUsers: {}" , applicationUsers);
+        log.info("applicationUsers: {}", applicationUsers);
 
-        if(applicationUsers.isEmpty()){
+        if (applicationUsers.isEmpty()) {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
 
@@ -65,12 +69,11 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     public GenericResponse getApplicationUserById(Long id) {
         Optional<ApplicationUser> applicationUser = applicationUserRepository.findById(id);
         log.info("applicationUser: {}", applicationUser);
-        if(!applicationUser.isPresent()){
+        if (!applicationUser.isPresent()) {
             return ResponseBuilder.buildFailure("Could not find the user.");
-        }
-        else{
+        } else {
             UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
-            if(response.getIsActive() == 'N'){
+            if (response.getIsActive() == 'N') {
                 return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DELETED);
             }
 
@@ -78,6 +81,7 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         }
     }
 
+    @Transactional
     @Override
     public GenericResponse saveApplicationUser(SaveUserRequest request) {
         log.info("request: {}", request);
@@ -85,23 +89,27 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         log.info("applicationUser: {}", applicationUser);
         applicationUser.setCreatedBy(new ApplicationUser(1L));
         applicationUser.setIsActive('Y');
+        applicationUser.setPassword(passwordEncoder.encode(request.getPassword()));
 
         List<ApplicationUser> applicationUserList = applicationUserRepository.findAll();
 
-        if(!applicationUserList.isEmpty()) {
+        if (!applicationUserList.isEmpty()) {
             for (ApplicationUser a : applicationUserList) {
                 if (a.getEmailAddress().equals(request.getEmailAddress())) {
                     return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_ALREADY_PRESENT);
                 }
             }
-
-
-            if (applicationUser.getFirstName().isEmpty() || applicationUser.getLastName().isEmpty() ||
-                    applicationUser.getPassword().isEmpty()) {
-                return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_CANT_BE_EMPTY);
-            }
         }
-        applicationUserRepository.save(applicationUser);
+
+        applicationUser = applicationUserRepository.save(applicationUser);
+        authorityRepository.saveAuthority(applicationUser.getId(), request.getRole());
+
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom("fakerfaker@2054gmail.com");
+        message.setTo(applicationUser.getEmailAddress());
+        message.setSubject("User created successfully");
+        message.setText("email:  " + applicationUser.getEmailAddress() + ", password: " + request.getPassword());
+        emailSender.send(message);
 
         return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_SAVED);
 
@@ -111,15 +119,13 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     public GenericResponse updateApplicationUser(Long id, UpdateUserRequest request) {
         log.info("request: {}", request);
         Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
-        if(!applicationUserOptional.isPresent()){
+        if (!applicationUserOptional.isPresent()) {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
-        }
-
-        else {
+        } else {
             ApplicationUser applicationUser = modelMapper.map(request, ApplicationUser.class);
 
-            if(applicationUser.getFirstName().isEmpty() || applicationUser.getLastName().isEmpty() ||
-                    applicationUser.getPassword().isEmpty()){
+            if (applicationUser.getFirstName().isEmpty() || applicationUser.getLastName().isEmpty() ||
+                    applicationUser.getPassword().isEmpty()) {
                 return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_CANT_BE_EMPTY);
             }
 
@@ -138,11 +144,9 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         log.info("id: {}", id);
         Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
         log.info("Optional: {}", applicationUserOptional);
-        if(!applicationUserOptional.isPresent()){
+        if (!applicationUserOptional.isPresent()) {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
-        }
-
-        else{
+        } else {
             ApplicationUser applicationUser = new ApplicationUser();
             applicationUser = modelMapper.map(applicationUserOptional.get(), ApplicationUser.class);
             applicationUser.setIsActive('N');
@@ -154,7 +158,7 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     @Override
     public GenericResponse findDeletedUsers() {
         final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
-        if(applicationUsers.isEmpty()){
+        if (applicationUsers.isEmpty()) {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         }
         List<UserDTO> userDTOList = new ArrayList<>();
@@ -168,17 +172,16 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
 
         List<UserDTO> usersTrash = new ArrayList<>();
 
-        for (UserDTO userDTO: userDTOList) {
-            if(userDTO.getIsActive() == 'N'){
+        for (UserDTO userDTO : userDTOList) {
+            if (userDTO.getIsActive() == 'N') {
                 usersTrash.add(userDTO);
             }
         }
         log.info("Trash: {}", usersTrash);
 
-        if(usersTrash.isEmpty()){
+        if (usersTrash.isEmpty()) {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.NO_TRASH);
-        }
-        else{
+        } else {
             return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_FOUND, usersTrash);
         }
 
