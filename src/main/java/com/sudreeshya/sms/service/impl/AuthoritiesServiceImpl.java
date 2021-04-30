@@ -6,7 +6,7 @@ import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.model.Authority;
 import com.sudreeshya.sms.repository.AuthorityRepository;
 import com.sudreeshya.sms.response.dto.AuthorityDTO;
-import com.sudreeshya.sms.service.AuthorityService;
+import com.sudreeshya.sms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Service
-public class AuthoritiesServiceImpl implements AuthorityService {
+public class AuthoritiesServiceImpl implements RoleService {
 
     private final AuthorityRepository authorityRepository;
     private final ModelMapper modelMapper;

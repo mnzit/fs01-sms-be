@@ -1,6 +1,6 @@
 package com.sudreeshya.sms.provider;
 
-import com.sudreeshya.sms.JwtAuthenticationToken;
+import com.sudreeshya.sms.token.JwtAuthenticationToken;
 import com.sudreeshya.sms.dto.CustomUserDetail;
 import com.sudreeshya.sms.dto.JwtDTO;
 import com.sudreeshya.sms.model.ApplicationUser;

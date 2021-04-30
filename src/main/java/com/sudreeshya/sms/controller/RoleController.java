@@ -2,7 +2,7 @@ package com.sudreeshya.sms.controller;
 
 import com.sudreeshya.sms.constant.APIPathConstants;
 import com.sudreeshya.sms.dto.GenericResponse;
-import com.sudreeshya.sms.service.AuthorityService;
+import com.sudreeshya.sms.service.RoleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,18 +16,18 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
-@RequestMapping(APIPathConstants.AUTHORITIES)
-public class AuthorityController {
+@RequestMapping(APIPathConstants.ROLES)
+public class RoleController {
 
-    private final AuthorityService authorityService;
+    private final RoleService roleService;
 
-    public AuthorityController(AuthorityService authorityService) {
-        this.authorityService = authorityService;
+    public RoleController(RoleService roleService) {
+        this.roleService = roleService;
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findAllUsers() {
-        GenericResponse genericResponse = authorityService.getAllAuthorities();
+        GenericResponse genericResponse = roleService.getAllAuthorities();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 

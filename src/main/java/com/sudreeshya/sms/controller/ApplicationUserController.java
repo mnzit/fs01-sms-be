@@ -5,6 +5,7 @@ import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.request.SaveUserRequest;
 import com.sudreeshya.sms.request.UpdateUserRequest;
 import com.sudreeshya.sms.service.ApplicationUserService;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -38,6 +39,7 @@ public class ApplicationUserController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
+    @SneakyThrows
     @PostMapping(value = APIPathConstants.SharedOperations.SAVE,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)

@@ -1,21 +1,23 @@
 package com.sudreeshya.sms.service.impl;
 
+import com.sudreeshya.sms.async.event.EmailEvent;
+import com.sudreeshya.sms.async.producer.EmailEventProducer;
+import com.sudreeshya.sms.builder.ApplicationUserBuilder;
 import com.sudreeshya.sms.builder.ResponseBuilder;
 import com.sudreeshya.sms.constant.ResponseMsgConstant;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.model.ApplicationUser;
-import com.sudreeshya.sms.repository.AuthorityRepository;
 import com.sudreeshya.sms.repository.ApplicationUserRepository;
+import com.sudreeshya.sms.repository.AuthorityRepository;
+import com.sudreeshya.sms.repository.CourseRepository;
 import com.sudreeshya.sms.request.SaveUserRequest;
 import com.sudreeshya.sms.request.UpdateUserRequest;
 import com.sudreeshya.sms.response.dto.UserDTO;
 import com.sudreeshya.sms.service.ApplicationUserService;
+import com.sudreeshya.sms.validator.ApplicationUserValidator;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -38,8 +40,8 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
     private final AuthorityRepository authorityRepository;
-    private final JavaMailSender emailSender;
-
+    private final EmailEventProducer emailEventProducer;
+    private final CourseRepository courseRepository;
 
     @Override
     public GenericResponse getAllApplicationUser() {
@@ -84,35 +86,24 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     @Transactional
     @Override
     public GenericResponse saveApplicationUser(SaveUserRequest request) {
-        log.info("request: {}", request);
-        ApplicationUser applicationUser = modelMapper.map(request, ApplicationUser.class);
-        log.info("applicationUser: {}", applicationUser);
-        applicationUser.setCreatedBy(new ApplicationUser(1L));
-        applicationUser.setIsActive('Y');
-        applicationUser.setPassword(passwordEncoder.encode(request.getPassword()));
+        // Build from request
+        ApplicationUser applicationUser = null;
+        applicationUser = ApplicationUserBuilder.buildForSave(modelMapper, request, passwordEncoder, courseRepository);
 
+        // Perform Validation
         List<ApplicationUser> applicationUserList = applicationUserRepository.findAll();
-
-        if (!applicationUserList.isEmpty()) {
-            for (ApplicationUser a : applicationUserList) {
-                if (a.getEmailAddress().equals(request.getEmailAddress())) {
-                    return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_ALREADY_PRESENT);
-                }
-            }
-        }
-
+        ApplicationUserValidator.validateForSave(applicationUserList, request.getEmailAddress());
+        // Persist in DB
         applicationUser = applicationUserRepository.save(applicationUser);
         authorityRepository.saveAuthority(applicationUser.getId(), request.getRole());
-
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("fakerfaker@2054gmail.com");
-        message.setTo(applicationUser.getEmailAddress());
-        message.setSubject("User created successfully");
-        message.setText("email:  " + applicationUser.getEmailAddress() + ", password: " + request.getPassword());
-        emailSender.send(message);
-
+        // Send Mail
+        emailEventProducer.sendEmail(new EmailEvent(
+                applicationUser.getEmailAddress(),
+                "User created successfully",
+                "email:  " + applicationUser.getEmailAddress() + ", password: " + request.getPassword()
+        ));
+        // Return Success
         return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_SAVED);
-
     }
 
     @Override

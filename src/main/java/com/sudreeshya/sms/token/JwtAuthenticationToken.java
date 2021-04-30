@@ -1,8 +1,7 @@
-package com.sudreeshya.sms;
+package com.sudreeshya.sms.token;
 
 import lombok.Getter;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.util.Assert;
 

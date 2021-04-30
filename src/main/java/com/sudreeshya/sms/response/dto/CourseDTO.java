@@ -12,6 +12,8 @@ import java.io.Serializable;
 @ToString
 
 public class CourseDTO implements Serializable {
+
+    private Long id;
     private String name;
     private String description;
     private String code;

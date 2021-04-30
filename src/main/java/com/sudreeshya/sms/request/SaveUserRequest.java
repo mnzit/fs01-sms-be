@@ -31,4 +31,5 @@ public class SaveUserRequest implements Serializable {
     private String password;
     @NotEmpty
     private Long role;
+    private Long course;
 }
