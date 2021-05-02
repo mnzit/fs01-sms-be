@@ -1,5 +1,6 @@
 package com.sudreeshya.sms.response.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,4 +22,8 @@ public class UserDTO implements Serializable {
     private String contactNo;
     private String emailAddress;
     private Character isActive;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Long role;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Long course;
 }

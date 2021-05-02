@@ -6,7 +6,12 @@ import com.sudreeshya.sms.builder.ApplicationUserBuilder;
 import com.sudreeshya.sms.builder.ResponseBuilder;
 import com.sudreeshya.sms.constant.ResponseMsgConstant;
 import com.sudreeshya.sms.dto.GenericResponse;
+import com.sudreeshya.sms.exception.NotFoundException;
 import com.sudreeshya.sms.model.ApplicationUser;
+import com.sudreeshya.sms.model.ApplicationUserAuthority;
+import com.sudreeshya.sms.model.Authority;
+import com.sudreeshya.sms.model.Course;
+import com.sudreeshya.sms.repository.ApplicationUserAuthorityRepository;
 import com.sudreeshya.sms.repository.ApplicationUserRepository;
 import com.sudreeshya.sms.repository.AuthorityRepository;
 import com.sudreeshya.sms.repository.CourseRepository;
@@ -37,6 +42,7 @@ import java.util.stream.Collectors;
 public class ApplicationUserServiceImpl implements ApplicationUserService {
 
     private final ApplicationUserRepository applicationUserRepository;
+    private final ApplicationUserAuthorityRepository applicationUserAuthorityRepository;
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
     private final AuthorityRepository authorityRepository;
@@ -58,7 +64,25 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
 
         userDTOList = applicationUsers
                 .stream()
-                .map(applicationUser -> modelMapper.map(applicationUser, UserDTO.class))
+                .map(applicationUser -> {
+                    UserDTO userDTO = new UserDTO();
+
+                    userDTO.setId(applicationUser.getId());
+                    userDTO.setAddress(applicationUser.getAddress());
+                    userDTO.setContactNo(applicationUser.getContactNo());
+                    userDTO.setIsActive(applicationUser.getIsActive());
+                    userDTO.setFirstName(applicationUser.getFirstName());
+                    userDTO.setLastName(applicationUser.getLastName());
+                    userDTO.setEmailAddress(applicationUser.getEmailAddress());
+                    if (applicationUser.getAuthorities() != null && !applicationUser.getAuthorities().isEmpty() && applicationUser.getAuthorities().get(0) != null) {
+                        userDTO.setRole(applicationUser.getAuthorities().get(0).getId());
+                    }
+                    if (applicationUser.getCourse() != null) {
+                        userDTO.setCourse(applicationUser.getCourse().getId());
+                    }
+
+                    return userDTO;
+                })
                 .collect(Collectors.toList());
 
         log.info("userDTOList: {}", userDTOList);
@@ -69,12 +93,30 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
 
     @Override
     public GenericResponse getApplicationUserById(Long id) {
-        Optional<ApplicationUser> applicationUser = applicationUserRepository.findById(id);
-        log.info("applicationUser: {}", applicationUser);
-        if (!applicationUser.isPresent()) {
+        Optional<ApplicationUser> applicationUserOptional = applicationUserRepository.findById(id);
+        log.info("applicationUser: {}", applicationUserOptional);
+        if (!applicationUserOptional.isPresent()) {
             return ResponseBuilder.buildFailure("Could not find the user.");
         } else {
-            UserDTO response = modelMapper.map(applicationUser.get(), UserDTO.class);
+            ApplicationUser applicationUser = applicationUserOptional.get();
+            UserDTO response = new UserDTO();
+
+            response.setId(applicationUser.getId());
+            response.setAddress(applicationUser.getAddress());
+            response.setContactNo(applicationUser.getContactNo());
+            response.setIsActive(applicationUser.getIsActive());
+            response.setFirstName(applicationUser.getFirstName());
+            response.setLastName(applicationUser.getLastName());
+            response.setEmailAddress(applicationUser.getEmailAddress());
+
+            if (applicationUser.getAuthorities() != null && !applicationUser.getAuthorities().isEmpty() && applicationUser.getAuthorities().get(0) != null) {
+                response.setRole(applicationUser.getAuthorities().get(0).getId());
+            }
+
+            if (applicationUser.getCourse() != null) {
+                response.setCourse(applicationUser.getCourse().getId());
+            }
+
             if (response.getIsActive() == 'N') {
                 return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_WAS_DELETED);
             }
@@ -106,6 +148,7 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_SAVED);
     }
 
+    @Transactional
     @Override
     public GenericResponse updateApplicationUser(Long id, UpdateUserRequest request) {
         log.info("request: {}", request);
@@ -113,16 +156,32 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
         if (!applicationUserOptional.isPresent()) {
             return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_NOT_FOUND);
         } else {
-            ApplicationUser applicationUser = modelMapper.map(request, ApplicationUser.class);
-
-            if (applicationUser.getFirstName().isEmpty() || applicationUser.getLastName().isEmpty() ||
-                    applicationUser.getPassword().isEmpty()) {
-                return ResponseBuilder.buildFailure(ResponseMsgConstant.USER_CANT_BE_EMPTY);
-            }
+            ApplicationUser applicationUser = new ApplicationUser();
 
             applicationUser.setId(id);
+            applicationUser.setAddress(request.getAddress());
+            applicationUser.setContactNo(request.getContactNo());
+            applicationUser.setIsActive(request.getIsActive());
+            applicationUser.setFirstName(request.getFirstName());
+            applicationUser.setLastName(request.getLastName());
+            applicationUser.setEmailAddress(request.getEmailAddress());
+            applicationUser.setPassword(applicationUserOptional.get().getPassword());
+
+            final ApplicationUserAuthority applicationUserAuthority = applicationUserAuthorityRepository.findApplicationUserAuthoritiesByApplicationUser_Id(id);
+
+            if (applicationUserAuthority != null) {
+                final Optional<Authority> newAuthority = authorityRepository.findById(request.getRole());
+                applicationUserAuthority.setAuthority(newAuthority.orElseThrow(() -> new NotFoundException("Role not found")));
+                applicationUserAuthorityRepository.save(applicationUserAuthority);
+            }
+
+            if (request.getCourse() != null) {
+                final Optional<Course> course = courseRepository.findById(request.getCourse());
+
+                applicationUser.setCourse(course.orElseThrow(() -> new NotFoundException("Course not found")));
+            }
             applicationUser.setCreatedBy(new ApplicationUser(1L));
-            applicationUser.setIsActive('Y');
+            applicationUser.setIsActive(request.getIsActive());
             applicationUserRepository.save(applicationUser);
 
             return ResponseBuilder.buildSuccess(ResponseMsgConstant.USER_UPDATED);

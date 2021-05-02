@@ -29,7 +29,7 @@ public class Authority implements Serializable {
             length = 100,
             updatable = true,
             insertable = true,
-            nullable = false
+            nullable = true
     )
     private String name;
 
