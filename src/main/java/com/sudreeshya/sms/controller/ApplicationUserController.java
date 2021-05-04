@@ -1,16 +1,28 @@
 package com.sudreeshya.sms.controller;
 
 import com.sudreeshya.sms.constant.APIPathConstants;
+import com.sudreeshya.sms.download.excel.service.ExcelService;
 import com.sudreeshya.sms.dto.GenericResponse;
+import com.sudreeshya.sms.model.ApplicationUser;
 import com.sudreeshya.sms.request.SaveUserRequest;
 import com.sudreeshya.sms.request.UpdateUserRequest;
 import com.sudreeshya.sms.service.ApplicationUserService;
+import com.sudreeshya.sms.util.OutputStreamUtil;
+import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+import java.util.List;
 
 /**
  * @author Manjit Shakya
@@ -19,13 +31,11 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping(APIPathConstants.USERS)
+@AllArgsConstructor
 public class ApplicationUserController {
 
     private final ApplicationUserService applicationUserService;
 
-    public ApplicationUserController(ApplicationUserService applicationUserService) {
-        this.applicationUserService = applicationUserService;
-    }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> findAllUsers() {
@@ -71,6 +81,18 @@ public class ApplicationUserController {
     public ResponseEntity<GenericResponse> findDeletedUsers() {
         GenericResponse genericResponse = applicationUserService.findDeletedUsers();
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
+    }
+
+    @GetMapping(value = APIPathConstants.SharedOperations.DOWNLOAD)
+    public ResponseEntity<?> downloadApplicationUser(HttpServletResponse httpServletResponse) {
+
+        String fileName = "users.xls";
+
+        httpServletResponse.setHeader("Content-Disposition", "attachment; filename=" + fileName);
+        httpServletResponse.setContentType("application/vnd.ms-excel");
+        final ByteArrayOutputStream download = applicationUserService.download();
+        OutputStreamUtil.writeToHttpServletResponse(httpServletResponse, download);
+        return ResponseEntity.ok().build();
     }
 
 }

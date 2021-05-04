@@ -25,5 +25,6 @@ public interface APIPathConstants {
         String UPDATE = "update";
         String DELETE = "delete";
         String TRASH = "trash";
+        String DOWNLOAD = "download";
     }
 }

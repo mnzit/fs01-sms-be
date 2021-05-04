@@ -5,6 +5,7 @@ import com.sudreeshya.sms.async.producer.EmailEventProducer;
 import com.sudreeshya.sms.builder.ApplicationUserBuilder;
 import com.sudreeshya.sms.builder.ResponseBuilder;
 import com.sudreeshya.sms.constant.ResponseMsgConstant;
+import com.sudreeshya.sms.download.excel.service.ExcelService;
 import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.exception.NotFoundException;
 import com.sudreeshya.sms.model.ApplicationUser;
@@ -22,11 +23,14 @@ import com.sudreeshya.sms.service.ApplicationUserService;
 import com.sudreeshya.sms.validator.ApplicationUserValidator;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -48,6 +52,7 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
     private final AuthorityRepository authorityRepository;
     private final EmailEventProducer emailEventProducer;
     private final CourseRepository courseRepository;
+    private final ExcelService<List<UserDTO>,ByteArrayOutputStream> excelService;
 
     @Override
     public GenericResponse getAllApplicationUser() {
@@ -237,5 +242,27 @@ public class ApplicationUserServiceImpl implements ApplicationUserService {
 
     }
 
+    @Override
+    public ByteArrayOutputStream download() {
+        final List<ApplicationUser> applicationUsers = applicationUserRepository.findAll();
+
+        final List<UserDTO> collect = applicationUsers.stream().map((applicationUser) -> {
+            UserDTO response = new UserDTO();
+
+            response.setId(applicationUser.getId());
+            response.setContactNo(applicationUser.getContactNo());
+            response.setFirstName(applicationUser.getFirstName());
+            response.setLastName(applicationUser.getLastName());
+            response.setEmailAddress(applicationUser.getEmailAddress());
+            return response;
+        }).collect(Collectors.toList());
+        try {
+          return excelService.convert(collect);
+
+        } catch (Exception e) {
+            log.error("Excel conversion failed");
+        }
+        return null;
+    }
 }
 

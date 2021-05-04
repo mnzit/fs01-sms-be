@@ -4,6 +4,9 @@ import com.sudreeshya.sms.dto.GenericResponse;
 import com.sudreeshya.sms.request.SaveUserRequest;
 import com.sudreeshya.sms.request.UpdateUserRequest;
 
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
+
 /**
  * @author Manjit Shakya
  * @email manjit.shakya@f1soft.com
@@ -21,4 +24,6 @@ public interface ApplicationUserService {
     GenericResponse deleteApplicationUser(Long id);
 
     GenericResponse findDeletedUsers();
+
+    ByteArrayOutputStream download();
 }
