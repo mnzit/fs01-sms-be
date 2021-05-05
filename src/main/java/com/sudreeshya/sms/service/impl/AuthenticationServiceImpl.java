@@ -52,7 +52,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             log.info("applicationUser: {}", applicationUser);
 
                 Long currentTime = System.currentTimeMillis();
-                Long expiryInSeconds = 300L;
+                Long expiryInSeconds = 1500L;
 
                 Map<String, Object> claims = new HashMap<>();
                 String authorities = applicationUser

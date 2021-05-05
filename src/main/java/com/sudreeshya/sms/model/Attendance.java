@@ -6,7 +6,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * @author Manjit Shakya
@@ -18,11 +17,13 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @Table(name = "TBL_ATTENDANCE")
-public class Attendance extends Auditable<Attendance> {
+public class Attendance extends Auditable<ApplicationUser> {
 
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "APPLICATION_USER_ID", referencedColumnName = "id")
     private ApplicationUser applicationUser;
 
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "COURSE_ID", referencedColumnName = "id")
     private Course course;
 

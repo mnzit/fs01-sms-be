@@ -38,4 +38,8 @@ public interface ResponseMsgConstant {
 
     String AUTHORITIES_NOT_FOUND = "Could not find the Authorities!";
     String AUTHORITIES_FOUND = "Authorities fetched successfully";
+
+    String ATTENDANCE_SUCCESS = "Attendance fetched successfully";
+    String ATTENDANCE_SAVED= "Attendance saved successfully";
+    String ATTENDANCE_ALREADY_DONE= "Attendance already done";
 }

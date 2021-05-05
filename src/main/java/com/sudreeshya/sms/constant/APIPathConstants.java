@@ -10,6 +10,7 @@ public interface APIPathConstants {
     String SUBJECTS = "subjects";
     String LOGIN = "login";
     String ROLES = "roles";
+    String ATTENDANCE = "attendances";
 
     interface PathVariable{
         String USERID_WRAPPER = "{userId}";
