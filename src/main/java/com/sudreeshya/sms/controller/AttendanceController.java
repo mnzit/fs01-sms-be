@@ -34,7 +34,7 @@ public class AttendanceController {
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);
     }
 
-    @PostMapping(value = APIPathConstants.SharedOperations.SAVE + "/" + APIPathConstants.PathVariable.USERID_WRAPPER, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = APIPathConstants.SharedOperations.SAVE + "/" + APIPathConstants.PathVariable.USERID_WRAPPER, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<GenericResponse> saveAttendance(@PathVariable(APIPathConstants.PathVariable.USERID) Long id) {
         GenericResponse genericResponse = attendanceService.saveAttendance(id);
         return new ResponseEntity<>(genericResponse, HttpStatus.OK);

@@ -20,4 +20,6 @@ public class AuthSuccessResponse implements Serializable {
     private String token;
 
     private String authorities;
+
+    private Long userId;
 }

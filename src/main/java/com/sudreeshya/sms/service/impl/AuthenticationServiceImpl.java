@@ -73,7 +73,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                         .build();
 
                 String token = jwtService.generateToken(jwtData);
-                return ResponseBuilder.buildSuccess("Login successful", new AuthSuccessResponse(token,authorities));
+                return ResponseBuilder.buildSuccess("Login successful", new AuthSuccessResponse(token,authorities,applicationUser.getId()));
 
             } else {
                 return ResponseBuilder.buildFailure("Username or Password is incorrect");
